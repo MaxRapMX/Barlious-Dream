@@ -1,0 +1,33 @@
+{
+  "mc_bell_kc": { "subtitle": "subtitle.mrmx_dream.kill_confirm",
+    "sounds": [
+      {
+        "name": "mrmx_dream:mc_bell_kc", "stream": false
+      }
+    ]
+  }, "breath_kc": { "subtitle": "subtitle.mrmx_dream.kill_confirm",
+    "sounds": [
+      {
+        "name": "mrmx_dream:breath_kc", "stream": false
+      }
+    ]
+  }, "pvz_gw_kc": { "subtitle": "subtitle.mrmx_dream.kill_confirm",
+    "sounds": [
+      {
+        "name": "mrmx_dream:pvz_gw_kc", "stream": false
+      }
+    ]
+  }, "pvz_pause": { "subtitle": "subtitle.mrmx_dream.game_paused",
+    "sounds": [
+      {
+        "name": "mrmx_dream:pvz_pause", "stream": false
+      }
+    ]
+  }, "skullgirls_pause": { "subtitle": "subtitle.mrmx_dream.game_paused",
+  "sounds": [
+    {
+      "name": "mrmx_dream:skullgirls_pause", "stream": false
+    }
+  ]
+}
+}

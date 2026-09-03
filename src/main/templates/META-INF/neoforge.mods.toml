@@ -46,7 +46,7 @@ displayName="${mod_name}" #mandatory
 
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-Example mod description.
+This is a mod that add all the litle things that MaxRapMX wish one day. Este mod agrega cositas que MaxRapMX deseo alguna vez.
 '''
 
 # The [[mixins]] block allows you to declare your mixin config to FML so that it gets loaded.

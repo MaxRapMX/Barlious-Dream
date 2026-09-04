@@ -28,4 +28,34 @@ public class Kill_Confirm {
                             ResourceLocation.fromNamespaceAndPath("mrmx_dream", "pvz_gw_kc")
                     )
             );
+    public static final DeferredHolder<SoundEvent, SoundEvent> MEME_DISAPPOINTED_KC =
+            KILL_CONFIRM_SOUND.register("meme_disappointed_kc",
+                    () -> SoundEvent.createVariableRangeEvent(
+                            ResourceLocation.fromNamespaceAndPath("mrmx_dream", "meme_disappointed_kc")
+                    )
+            );
+    public static final DeferredHolder<SoundEvent, SoundEvent> MEME_METAL_PIPE_KC =
+            KILL_CONFIRM_SOUND.register("meme_metal_pipe_kc",
+                    () -> SoundEvent.createVariableRangeEvent(
+                            ResourceLocation.fromNamespaceAndPath("mrmx_dream", "meme_metal_pipe_kc")
+                    )
+            );
+    public static final DeferredHolder<SoundEvent, SoundEvent> CUSTOM_KC_1 =
+            KILL_CONFIRM_SOUND.register("custom_kc_1",
+                    () -> SoundEvent.createVariableRangeEvent(
+                            ResourceLocation.fromNamespaceAndPath("mrmx_dream", "custom_kc_1")
+                    )
+            );
+    public static final DeferredHolder<SoundEvent, SoundEvent> CUSTOM_KC_2 =
+            KILL_CONFIRM_SOUND.register("custom_kc_2",
+                    () -> SoundEvent.createVariableRangeEvent(
+                            ResourceLocation.fromNamespaceAndPath("mrmx_dream", "custom_kc_2")
+                    )
+            );
+    public static final DeferredHolder<SoundEvent, SoundEvent> CUSTOM_KC_3 =
+            KILL_CONFIRM_SOUND.register("custom_kc_3",
+                    () -> SoundEvent.createVariableRangeEvent(
+                            ResourceLocation.fromNamespaceAndPath("mrmx_dream", "custom_kc_3")
+                    )
+            );
 }

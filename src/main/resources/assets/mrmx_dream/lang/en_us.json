@@ -1,23 +1,20 @@
 {
   "mrmx_dream.config.general.title": "Barlious Dream Configuration",
+  "mrmx_dream.config.sound_modules.volume": "Volume",
+  "mrmx_dream.config.sound_modules.pitch": "Pitch",
+  "mrmx_dream.config.sound_modules.sound_test": "Sound-Test (In-Game)",
 
   "mrmx_dream.config.general.kill_confirm_module": "Kill-Confirm Module",
   "mrmx_dream.config.kill_confirm.title": "Kill-Confirm Module",
   "mrmx_dream.config.kill_confirm.enabled": "Kill-Confirm Module",
   "mrmx_dream.config.kill_confirm.players": "Kill-Confirm to Players",
-  "mrmx_dream.config.kill_confirm.hostile_mob": "Kill-Confirm to Hostile Mobs",
+  "mrmx_dream.config.kill_confirm.enemy_mob": "Kill-Confirm to Enemy Mobs",
   "mrmx_dream.config.kill_confirm.neutral_mob": "Kill-Confirm to Neutral Mobs",
   "mrmx_dream.config.kill_confirm.pacific_mob": "Kill-Confirm to Pacific Mobs",
-  "mrmx_dream.config.kill_confirm.sound_test": "Kill-Confirm Sound-Test",
   "mrmx_dream.config.kill_confirm.sound": "Kill-Confirm Sound",
-  "mrmx_dream.config.kill_confirm.volume": "Volume",
-  "mrmx_dream.config.kill_confirm.pitch": "Pitch",
 
   "mrmx_dream.config.general.game_pause_module": "Game-Pause Module",
   "mrmx_dream.config.game_pause.title": "Game-Pause Module",
   "mrmx_dream.config.game_pause.enabled": "Game-Pause Module",
-  "mrmx_dream.config.game_pause.sound_test": "Game-Pause Sound-Test",
-  "mrmx_dream.config.game_pause.sound": "Game-Pause Sound",
-  "mrmx_dream.config.game_pause.volume": "Volume",
-  "mrmx_dream.config.game_pause.pitch": "Pitch"
+  "mrmx_dream.config.game_pause.sound": "Game-Pause Sound"
 }

@@ -14,26 +14,26 @@ import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
 
 @EventBusSubscriber(modid = Barlious_Dream.MODID)
 public class KillConfirmed {
-    @SubscribeEvent
 
+    @SubscribeEvent
     public static void PlayerKillConfirm(LivingDeathEvent event) {
         if (!KillConfirmConfig.ENABLED.get()) { return; }
 
-        Entity attacker = event.getSource().getEntity();
-        if (!(attacker instanceof ServerPlayer player)) { return; }
+        Entity KillSource = event.getSource().getEntity();
+        if (!(KillSource instanceof ServerPlayer player)) { return; }
 
-        LivingEntity victim = event.getEntity();
-        boolean PlayerValidEnemy;
+        LivingEntity Killed_Mob = event.getEntity();
 
-        if (victim instanceof ServerPlayer) {
-            PlayerValidEnemy = KillConfirmConfig.PLAYER_ENABLED.get();
-        } else if (victim instanceof Enemy) {
-            PlayerValidEnemy = KillConfirmConfig.HOSTILE_ENABLED.get();
-        } else if (victim instanceof NeutralMob) {
-            PlayerValidEnemy = KillConfirmConfig.NEUTRAL_ENABLED.get();
+        boolean ValidKillToConfirm;
+        if (Killed_Mob instanceof ServerPlayer) {
+            ValidKillToConfirm = KillConfirmConfig.PLAYER_ENABLED.get();
+        } else if (Killed_Mob instanceof Enemy) {
+            ValidKillToConfirm = KillConfirmConfig.ENEMY_ENABLED.get();
+        } else if (Killed_Mob instanceof NeutralMob) {
+            ValidKillToConfirm = KillConfirmConfig.NEUTRAL_ENABLED.get();
         } else {
-            PlayerValidEnemy = KillConfirmConfig.PACIFIC_ENABLED.get();
-        } if (!PlayerValidEnemy) { return; }
+            ValidKillToConfirm = KillConfirmConfig.PACIFIC_ENABLED.get();
+        } if (!ValidKillToConfirm) { return; }
 
         player.playNotifySound(
                 KillConfirmConfig.SOUND.get().getSound(),

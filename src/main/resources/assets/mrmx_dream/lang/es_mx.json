@@ -1,0 +1,20 @@
+{
+  "mrmx_dream.config.general.title": "Configuracion de Barlious Dream",
+  "mrmx_dream.config.sound_modules.volume": "Volumen",
+  "mrmx_dream.config.sound_modules.pitch": "Pitch",
+  "mrmx_dream.config.sound_modules.sound_test": "Prueba de Sonido (In-Game)",
+
+  "mrmx_dream.config.general.kill_confirm_module": "Modulo Derrota-Confirmada",
+  "mrmx_dream.config.kill_confirm.title": "Modulo Derrota-Confirmada",
+  "mrmx_dream.config.kill_confirm.enabled": "Modulo Derrota-Confirmada",
+  "mrmx_dream.config.kill_confirm.players": "¿Sonido al matar Jugadores?",
+  "mrmx_dream.config.kill_confirm.enemy_mob": "¿Sonido al matar Mobs Enemigos?",
+  "mrmx_dream.config.kill_confirm.neutral_mob": "¿Sonido al matar Mobs Neutrales?",
+  "mrmx_dream.config.kill_confirm.pacific_mob": "¿Sonido al matar Mobs Pacificos?",
+  "mrmx_dream.config.kill_confirm.sound": "Sonido de Kill-Confirmada",
+
+  "mrmx_dream.config.general.game_pause_module": "Modulo Pausa-Sonora",
+  "mrmx_dream.config.game_pause.title": "Modulo Pausa-Sonora",
+  "mrmx_dream.config.game_pause.enabled": "Modulo Pausa-Sonora",
+  "mrmx_dream.config.game_pause.sound": "Sonido de Pausa-Sonora"
+}

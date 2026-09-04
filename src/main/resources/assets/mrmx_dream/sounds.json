@@ -17,6 +17,48 @@
         "name": "mrmx_dream:pvz_gw_kc", "stream": false
       }
     ]
+  }, "meme_disappointed_kc": { "subtitle": "subtitle.mrmx_dream.kill_confirm",
+  "sounds": [
+    {
+      "name": "mrmx_dream:meme_disappointed_kc", "stream": false
+    }
+  ]
+ }, "meme_metal_pipe_kc": { "subtitle": "subtitle.mrmx_dream.kill_confirm",
+  "sounds": [
+    {
+      "name": "mrmx_dream:meme_metal_pipe_kc", "stream": false
+    }
+  ]
+},"custom_kc_1": { "subtitle": "subtitle.mrmx_dream.kill_confirm",
+    "sounds": [
+      {
+        "name": "mrmx_dream:custom_kc_1", "stream": false
+      }
+    ]
+  }, "custom_kc_2": { "subtitle": "subtitle.mrmx_dream.kill_confirm",
+  "sounds": [
+    {
+      "name": "mrmx_dream:custom_kc_2", "stream": false
+    }
+  ]
+}, "custom_kc_3": { "subtitle": "subtitle.mrmx_dream.kill_confirm",
+    "sounds": [
+      {
+        "name": "mrmx_dream:custom_kc_3", "stream": false
+      }
+    ]
+  },
+
+
+
+
+
+  "mc_click_pause": { "subtitle": "subtitle.mrmx_dream.game_paused",
+    "sounds": [
+      {
+        "name": "mrmx_dream:mc_click_pause", "stream": false
+      }
+    ]
   }, "pvz_pause": { "subtitle": "subtitle.mrmx_dream.game_paused",
     "sounds": [
       {
@@ -29,5 +71,23 @@
       "name": "mrmx_dream:skullgirls_pause", "stream": false
     }
   ]
-}
+ }, "custom_pause_1": { "subtitle": "subtitle.mrmx_dream.game_paused",
+  "sounds": [
+    {
+      "name": "mrmx_dream:custom_pause_1", "stream": false
+    }
+  ]
+ }, "custom_pause_2": { "subtitle": "subtitle.mrmx_dream.game_paused",
+  "sounds": [
+    {
+      "name": "mrmx_dream:custom_pause_2", "stream": false
+    }
+  ]
+ }, "custom_pause_3": { "subtitle": "subtitle.mrmx_dream.game_paused",
+  "sounds": [
+    {
+      "name": "mrmx_dream:custom_pause_3", "stream": false
+    }
+  ]
+ }
 }

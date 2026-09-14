@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "b": {
+      "tag": "cnc_replanted:vanilla_dirts"
+    },
+    "c": {
+      "tag": "cnc_replanted:selected_seeds"
+    },
+    "g": {
+      "tag": "cnc_replanted:iron_nugget_sustitute"
+    }
+  },
+  "pattern": [
+    "gcg",
+    "cbc",
+    "gcg"
+  ],
+  "result": {
+    "count": 1,
+    "id": "cnc:empty_seed_packet"
+  }
+}

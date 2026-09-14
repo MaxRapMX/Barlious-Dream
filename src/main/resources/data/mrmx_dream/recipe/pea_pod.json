@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "b": {
+      "item": "cnc:raw_pea"
+    },
+    "c": {
+      "tag": "cnc_replanted:selected_seeds"
+    }
+  },
+  "pattern": [
+    " cb",
+    "cbc",
+    "bc "
+  ],
+  "result": {
+    "count": 1,
+    "id": "cnc:pea_pod"
+  }
+}

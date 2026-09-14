@@ -1,0 +1,125 @@
+{
+  "mc_click": { "subtitle": "mrmx_dream.subtitle.mc_click",
+    "sounds": [
+      { "name": "mrmx_dream:mc_click", "stream": false }
+    ]
+  }, "spongebob_disappointed": { "subtitle": "mrmx_dream.subtitle.disappointed",
+  "sounds": [
+    {
+      "name": "mrmx_dream:spongebob_disappointed", "stream": false
+    }
+  ]
+},
+
+
+
+  "mc_bell": { "subtitle": "mrmx_dream.subtitle.mc_bell",
+    "sounds": [
+      {
+        "name": "mrmx_dream:mc_bell", "stream": false
+      }
+    ]
+  }, "mc_ding": { "subtitle": "mrmx_dream.subtitle.mc_ding",
+  "sounds": [
+    {
+      "name": "mrmx_dream:mc_ding", "stream": false
+    }
+  ]
+}, "mc_trident_channeling": { "subtitle": "mrmx_dream.subtitle.mc_channeling",
+  "sounds": [
+    {
+      "name": "mrmx_dream:mc_trident_channeling", "stream": false
+    }
+  ]
+}, "meme_bonk": { "subtitle": "mrmx_dream.subtitle.bonk",
+  "sounds": [
+    {
+      "name": "mrmx_dream:meme_bonk", "stream": false
+    }
+  ]
+ }, "meme_fart_reverb": { "subtitle": "mrmx_dream.subtitle.fart",
+  "sounds": [
+    {
+      "name": "mrmx_dream:meme_fart_reverb", "stream": false
+    }
+  ]
+ },"metal_pipe": { "subtitle": "mrmx_dream.subtitle.relaxing_asmr",
+  "sounds": [
+    {
+      "name": "mrmx_dream:metal_pipe", "stream": false
+    }
+  ]
+ }, "breath_1": { "subtitle": "mrmx_dream.subtitle.last_breath",
+  "sounds": [
+    {
+      "name": "mrmx_dream:breath_1", "stream": false
+    }
+  ]
+ }, "mk_fatality": { "subtitle": "mrmx_dream.subtitle.fatality",
+  "sounds": [
+    {
+      "name": "mrmx_dream:mk_fatality", "stream": false
+    }
+  ]
+ },"pvz_gw_kc": { "subtitle": "mrmx_dream.subtitle.pvz_kill_confirm",
+  "sounds": [
+    {
+      "name": "mrmx_dream:pvz_gw_kc", "stream": false
+    }
+  ]
+ }, "custom_pvp_1": { "subtitle": "mrmx_dream.subtitle.custom_pvp_sound",
+  "sounds": [
+    {
+      "name": "mrmx_dream:custom_pvp_1", "stream": false
+    }
+  ]
+ }, "custom_pvp_2": { "subtitle": "mrmx_dream.subtitle.custom_pvp_sound",
+  "sounds": [
+    {
+      "name": "mrmx_dream:custom_pvp_2", "stream": false
+    }
+  ]
+ }, "custom_pvp_3": { "subtitle": "mrmx_dream.subtitle.custom_pvp_sound",
+  "sounds": [
+    {
+      "name": "mrmx_dream:custom_pvp_3", "stream": false
+    }
+  ]
+ }, "custom_pvp_4": { "subtitle": "mrmx_dream.subtitle.custom_pvp_sound",
+  "sounds": [
+    {
+      "name": "mrmx_dream:custom_pvp_4", "stream": false
+    }
+  ]
+ }, "custom_pvp_5": { "subtitle": "mrmx_dream.subtitle.custom_pvp_sound",
+  "sounds": [
+    {
+      "name": "mrmx_dream:custom_pvp_5", "stream": false
+    }
+  ]
+ },
+
+
+
+  "pvz_pause": { "subtitle": "mrmx_dream.subtitle.game_paused",
+    "sounds": [
+      { "name": "mrmx_dream:pvz_pause", "stream": false }
+    ]
+  }, "skullgirls_pause_1": { "subtitle": "mrmx_dream.subtitle.game_paused",
+  "sounds": [
+    { "name": "mrmx_dream:skullgirls_pause_1", "stream": false }
+  ]
+ }, "custom_pause_1": { "subtitle": "mrmx_dream.subtitle.custom_game_paused",
+  "sounds": [
+    { "name": "mrmx_dream:custom_pause_1", "stream": false }
+  ]
+ }, "custom_pause_2": { "subtitle": "mrmx_dream.subtitle.custom_game_paused",
+  "sounds": [
+    { "name": "mrmx_dream:custom_pause_2", "stream": false }
+  ]
+ }, "custom_pause_3": { "subtitle": "mrmx_dream.subtitle.custom_game_paused",
+  "sounds": [
+    { "name": "mrmx_dream:custom_pause_3", "stream": false }
+  ]
+ }
+}

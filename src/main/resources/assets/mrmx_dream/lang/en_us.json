@@ -41,27 +41,5 @@
   "mrmx_dream.config.arrow_hit.neutral_mob": "Arrow-Hit to Neutral Mobs",
   "mrmx_dream.config.arrow_hit.pacific_mob": "Arrow-Hit to Pacific Mobs",
   "mrmx_dream.config.arrow_hit.sound": "Arrow-Hit Sound",
-  "mrmx_dream.config.arrow_block_hit.enabled": "Shame",
-
-
-
-  "creativetab.mrmx_dream.content": "Barliou´s Dream",
-  "item.mrmx_dream.logo": "Barliou´s Dream Logo",
-  "tooltip.mrmx_dream.machete": "Bonus Damage for Monsters:",
-  "item.mrmx_dream.iron_machete": "Iron Machete",
-  "item.mrmx_dream.diamond_machete": "Diamond Machete",
-  "item.mrmx_dream.netherite_machete": "Netherite Machete",
-  "tooltip.mrmx_dream.heavy_pickaxe": "Double durability, and can works like a shovel",
-  "item.mrmx_dream.iron_heavy_pickaxe": "Iron Heavy Pickaxe",
-  "item.mrmx_dream.diamond_heavy_pickaxe": "Diamond Heavy Pickaxe",
-  "item.mrmx_dream.netherite_heavy_pickaxe": "Netherite Heavy Pickaxe",
-
-  "tooltip.mrmx_dream.plant_whistle": "Can change the target of the CNC Plants",
-  "item.mrmx_dream.plant_whistle": "Plant Whistle",
-  "message.mrmx_dream.plant_whistle.wild_plant": "§eThis plant is savage",
-  "message.mrmx_dream.plant_whistle.not_your_plant": "§cThis plant isn´t your :p",
-  "message.mrmx_dream.plant_whistle.none_nearby": "§8Aren´t tamed plants nearby",
-  "message.mrmx_dream.plant_whistle.only_plant_target_mode": "§bOnly Plant Target Defense Mode",
-  "message.mrmx_dream.plant_whistle.no_mercy_mode": "§cTotal Defense Mode",
-  "message.mrmx_dream.plant_whistle.default_mode": "§7Default Defense Mode"
+  "mrmx_dream.config.arrow_block_hit.enabled": "Shame"
 }

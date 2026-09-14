@@ -41,27 +41,5 @@
   "mrmx_dream.config.arrow_hit.neutral_mob": "¿Sonido al flechar Mobs Neutrales?",
   "mrmx_dream.config.arrow_hit.pacific_mob": "¿Sonido al flechar Mobs Pacificos?",
   "mrmx_dream.config.arrow_hit.sound": "Sonido de Objetivo-Flechado",
-  "mrmx_dream.config.arrow_block_hit.enabled": "DESHONRA",
-
-
-
-  "creativetab.mrmx_dream.content": "Barliou´s Dream",
-  "item.mrmx_dream.logo": "Barliou´s Dream Logo",
-  "tooltip.mrmx_dream.machete": "Daño extra a Mounstros:",
-  "item.mrmx_dream.iron_machete": "Machete de hierro",
-  "item.mrmx_dream.diamond_machete": "Machete de diamante",
-  "item.mrmx_dream.netherite_machete": "Machete de netherita",
-  "tooltip.mrmx_dream.heavy_pickaxe": "Doble duracion, y puede minar como una pala",
-  "item.mrmx_dream.iron_heavy_pickaxe": "Pico Reforzado de hierro",
-  "item.mrmx_dream.diamond_heavy_pickaxe": "Pico Reforzado de diamante",
-  "item.mrmx_dream.netherite_heavy_pickaxe": "Pico Reforzado de netherita",
-
-  "tooltip.mrmx_dream.plant_whistle": "Permite cambiar a los objetivos de las Plantas de CNC",
-  "item.mrmx_dream.plant_whistle": "Silbato para Plantas",
-  "message.mrmx_dream.plant_whistle.wild_plant": "§eEsta planta es salvaje",
-  "message.mrmx_dream.plant_whistle.not_your_plant": "§cEsta planta no es tu aliada :p",
-  "message.mrmx_dream.plant_whistle.none_nearby": "§8No hay plantas aliadas cerca",
-  "message.mrmx_dream.plant_whistle.only_plant_target_mode": "§bModo de Defensa: Minima",
-  "message.mrmx_dream.plant_whistle.no_mercy_mode": "§cModo de Defensa: Total",
-  "message.mrmx_dream.plant_whistle.default_mode": "§7Modo de Defensa: por Defecto"
+  "mrmx_dream.config.arrow_block_hit.enabled": "DESHONRA"
 }

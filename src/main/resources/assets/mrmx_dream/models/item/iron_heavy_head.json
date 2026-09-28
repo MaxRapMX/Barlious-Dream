@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "mrmx_dream:item/iron_heavy_head"
+  }
+}

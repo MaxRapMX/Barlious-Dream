@@ -1,0 +1,33 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }, {
+      "type": "neoforge:mod_loaded", "modid": "corn_delight"
+    }, {
+      "type": "neoforge:mod_loaded", "modid": "cnc"
+    }
+  ], "type": "create:mixing",
+  "ingredients": [
+    { "item": "mrmx_dream:artisanal_cup" },
+    { "item": "corn_delight:corn_seeds" },
+    { "item": "cnc:cherries" },
+    { "item": "cnc:cherries" },
+    {
+      "type": "neoforge:tag",
+      "amount": 1000,
+      "tag": "c:milk"
+    }, {
+      "type": "neoforge:single",
+      "fluid": "minecraft:water",
+      "amount": 500
+    }
+  ],
+  "results": [
+    {
+      "id": "mrmx_dream:cherry_atole",
+      "count": 1
+    }
+  ]
+}

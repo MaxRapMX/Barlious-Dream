@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "b": {
+      "item": "minecraft:amethyst_shard"
+    },
+    "c": {
+      "item": "minecraft:obsidian"
+    }
+  },
+  "pattern": [
+    " b ",
+    "bcb",
+    " b "
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:crying_obsidian"
+  }
+}

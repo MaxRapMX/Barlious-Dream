@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "X": {
+      "tag": "c:ingots/iron"
+    },
+    "B": {
+      "tag": "c:nuggets/iron"
+    }
+  },
+  "pattern": [
+    "BXX",
+    "  X",
+    "  B"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mrmx_dream:iron_heavy_head"
+  }
+}

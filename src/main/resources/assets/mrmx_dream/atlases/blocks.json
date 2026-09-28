@@ -1,0 +1,24 @@
+{
+  "sources": [
+    { "type": "single",
+      "resource": "mrmx_dream:item/empty_slot_machete" },
+    { "type": "single",
+      "resource": "mrmx_dream:item/empty_slot_plant_food" },
+    { "type": "single",
+      "resource": "mrmx_dream:item/empty_slot_block" },
+    { "type": "single",
+      "resource": "mrmx_dream:item/empty_slot_heavy_head" },
+    { "type": "single",
+      "resource": "mrmx_dream:item/empty_slot_rotten_flesh" },
+    { "type": "single",
+      "resource": "mrmx_dream:item/empty_slot_sun" },
+    { "type": "single",
+      "resource": "mrmx_dream:item/empty_slot_glass_cup" },
+    { "type": "single",
+      "resource": "mrmx_dream:item/empty_slot_charcoal" },
+    { "type": "single",
+      "resource": "mrmx_dream:item/empty_slot_artisanal_cup" },
+    { "type": "single",
+      "resource": "mrmx_dream:item/empty_slot_snowball" }
+  ]
+}

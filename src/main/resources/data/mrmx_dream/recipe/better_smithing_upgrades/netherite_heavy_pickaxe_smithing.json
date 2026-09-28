@@ -1,0 +1,20 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded", "modid": "better_smithing_upgrades"
+    }
+  ], "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "better_smithing_upgrades:netherite_upgrade_part"
+  },
+  "base": {
+    "item": "mrmx_dream:diamond_heavy_pickaxe"
+  },
+  "result": {
+    "count": 1,
+    "id": "mrmx_dream:netherite_heavy_pickaxe"
+  },
+  "template": {
+    "item": "minecraft:netherite_upgrade_smithing_template"
+  }
+}

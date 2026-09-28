@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "tag": "minecraft:logs_that_burn"
+  },
+  "base": {
+    "item": "minecraft:netherite_sword"
+  },
+  "result": {
+    "count": 1,
+    "id": "mrmx_dream:netherite_machete"
+  },
+  "template": {
+    "item": "mrmx_dream:barlious_upgrade_smithing_template"
+  }
+}

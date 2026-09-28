@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:amethyst_shard","minecraft:cherry_leaves", "minecraft:stripped_warped_stem",
+    "minecraft:popped_chorus_fruit", "minecraft:baked_potato"
+  ]
+}

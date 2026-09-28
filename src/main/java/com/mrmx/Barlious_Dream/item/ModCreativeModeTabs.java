@@ -18,13 +18,23 @@ public class ModCreativeModeTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.BARLIOUS_DREAM_LOGO.get()))
                     .title(Component.translatable("creativetab.mrmx_dream.content"))
                     .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(ModItems.BARLIOUS_UPGRADE);
                         if (ModList.get().isLoaded("cnc")) output.accept(ModItems.PLANT_WHISTLE);
                         output.accept(ModItems.IRON_MACHETE);
                         output.accept(ModItems.DIAMOND_MACHETE);
                         output.accept(ModItems.NETHERITE_MACHETE);
+                        output.accept(ModItems.IRON_HEAVY_HEAD);
                         output.accept(ModItems.IRON_HEAVY_PICKAXE);
+                        output.accept(ModItems.DIAMOND_HEAVY_HEAD);
                         output.accept(ModItems.DIAMOND_HEAVY_PICKAXE);
+                        output.accept(ModItems.NETHERITE_HEAVY_HEAD);
                         output.accept(ModItems.NETHERITE_HEAVY_PICKAXE);
+                        if (ModList.get().isLoaded("corn_delight")) output.accept(ModItems.ARTISANAL_CUP);
+                        if (ModList.get().isLoaded("corn_delight")) output.accept(ModItems.VANILLA_ATOLE);
+                        if (ModList.get().isLoaded("corn_delight")) output.accept(ModItems.CHOCOLATE_ATOLE);
+                        if (ModList.get().isLoaded("corn_delight") && ModList.get().isLoaded("cnc")) output.accept(ModItems.CHERRY_ATOLE);
+                        if (ModList.get().isLoaded("corn_delight")) output.accept(ModItems.RICE_PUDING_ATOLE);
+                        if (ModList.get().isLoaded("corn_delight")) output.accept(ModItems.CHAMPURRADO);
                     }).build());
 
     public static void register(IEventBus eventBus ) {

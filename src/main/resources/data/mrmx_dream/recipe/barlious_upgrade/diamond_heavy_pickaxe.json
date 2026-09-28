@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "mrmx_dream:diamond_heavy_head"
+  },
+  "base": {
+    "item": "minecraft:diamond_pickaxe"
+  },
+  "result": {
+    "count": 1,
+    "id": "mrmx_dream:diamond_heavy_pickaxe"
+  },
+  "template": {
+    "item": "mrmx_dream:barlious_upgrade_smithing_template"
+  }
+}

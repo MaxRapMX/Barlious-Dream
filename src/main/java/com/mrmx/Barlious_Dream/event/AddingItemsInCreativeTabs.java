@@ -57,6 +57,41 @@ public class AddingItemsInCreativeTabs {
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
         }
 
+        // Ingredients
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.insertBefore(
+                    new ItemStack(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE), ModItems.BARLIOUS_UPGRADE.get().getDefaultInstance(),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            if (ModList.get().isLoaded("corn_delight"))
+                event.insertAfter(
+                        new ItemStack(Items.GLASS_BOTTLE), ModItems.ARTISANAL_CUP.get().getDefaultInstance(),
+                        CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+        }
+
+        // Food and Drinks
+        if (event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
+            if (ModList.get().isLoaded("corn_delight"))
+                event.insertAfter(
+                    new ItemStack(Items.MILK_BUCKET), ModItems.VANILLA_ATOLE.get().getDefaultInstance(),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            if (ModList.get().isLoaded("corn_delight"))
+                event.insertAfter(
+                        new ItemStack((ItemLike) ModItems.VANILLA_ATOLE), ModItems.CHOCOLATE_ATOLE.get().getDefaultInstance(),
+                        CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            if (ModList.get().isLoaded("corn_delight"))
+                event.insertAfter(
+                        new ItemStack((ItemLike) ModItems.CHOCOLATE_ATOLE), ModItems.RICE_PUDING_ATOLE.get().getDefaultInstance(),
+                        CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            if (ModList.get().isLoaded("corn_delight") && ModList.get().isLoaded("cnc"))
+                event.insertBefore(
+                        new ItemStack((ItemLike) ModItems.RICE_PUDING_ATOLE), ModItems.CHERRY_ATOLE.get().getDefaultInstance(),
+                        CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            if (ModList.get().isLoaded("corn_delight"))
+                event.insertAfter(
+                        new ItemStack((ItemLike) ModItems.RICE_PUDING_ATOLE), ModItems.CHAMPURRADO.get().getDefaultInstance(),
+                        CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+        }
+
         // CNC Tab
         if (ModList.get().isLoaded("cnc")) {
             ResourceKey<CreativeModeTab> cncTabKey = ResourceKey.create(
@@ -65,6 +100,10 @@ public class AddingItemsInCreativeTabs {
             ); if (event.getTabKey() == cncTabKey) {
                 event.insertBefore(
                         new ItemStack((ItemLike) ItemRegistry.PLANT_FOOD), ModItems.PLANT_WHISTLE.get().getDefaultInstance(),
+                        CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                if (ModList.get().isLoaded("corn_delight"))
+                    event.insertAfter(
+                        new ItemStack((ItemLike) ItemRegistry.CHERRY_MILKSHAKE), ModItems.CHERRY_ATOLE.get().getDefaultInstance(),
                         CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             }
         }

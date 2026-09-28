@@ -1,0 +1,22 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded", "modid": "cnc"
+    }, {
+      "type": "neoforge:mod_loaded", "modid": "corn_delight"
+    }
+  ], "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:snowball"
+  },
+  "base": {
+    "item": "mrmx_dream:vanilla_atole"
+  },
+  "result": {
+    "count": 1,
+    "id": "cnc:vanilla_milkshake"
+  },
+  "template": {
+    "item": "mrmx_dream:barlious_upgrade_smithing_template"
+  }
+}

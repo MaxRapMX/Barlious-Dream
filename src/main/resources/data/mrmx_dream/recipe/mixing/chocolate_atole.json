@@ -7,6 +7,7 @@
       "type": "neoforge:mod_loaded", "modid": "corn_delight"
     }
   ], "type": "create:mixing",
+  "heat_requirement": "heated",
   "ingredients": [
     { "item": "mrmx_dream:artisanal_cup" },
     { "item": "corn_delight:corn_seeds" },

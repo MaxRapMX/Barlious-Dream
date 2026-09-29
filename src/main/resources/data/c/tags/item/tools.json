@@ -1,0 +1,6 @@
+{
+  "replace": false,
+  "values": [
+    { "id": "mrmx_dream:plant_whistle", "required": false}
+  ]
+}

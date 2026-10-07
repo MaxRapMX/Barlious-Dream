@@ -109,7 +109,7 @@ public class ModItems {
             CHERRY_ATOLE = CherryAtole.build();
 
             var RicePudingAtole = (new FoodProperties.Builder()).nutrition(3).saturationModifier(1.2f).alwaysEdible().fast()
-                    .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 2100, 0), 1.0F);
+                    .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 900, 0), 1.0F);
             BuiltInRegistries.MOB_EFFECT.getHolder(ResourceLocation.parse("farmersdelight:nourishment"))
                     .ifPresent(nourishment -> RicePudingAtole.effect(() -> new MobEffectInstance(nourishment, 900, 0), 1.0F));
             RICE_PUDING_ATOLE = RicePudingAtole.build();

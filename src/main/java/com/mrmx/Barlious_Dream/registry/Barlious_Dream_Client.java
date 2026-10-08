@@ -3,6 +3,7 @@ package com.mrmx.Barlious_Dream.registry;
 import com.mrmx.Barlious_Dream.config.GamePauseConfig;
 import com.mrmx.Barlious_Dream.config.ArrowHitConfig;
 import com.mrmx.Barlious_Dream.config.KillConfirmConfig;
+import com.mrmx.Barlious_Dream.config.ThrownTridentHitConfig;
 import com.mrmx.Barlious_Dream.config.config_screen.GeneralConfigScreen;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.fml.ModContainer;
@@ -16,6 +17,7 @@ public class Barlious_Dream_Client {
         container.registerConfig(ModConfig.Type.CLIENT, KillConfirmConfig.SPEC, "mrmx_dream/kill_confirm-client.toml");
         container.registerConfig(ModConfig.Type.CLIENT, GamePauseConfig.SPEC, "mrmx_dream/game_pause-client.toml");
         container.registerConfig(ModConfig.Type.CLIENT, ArrowHitConfig.SPEC, "mrmx_dream/arrow_hit-client.toml");
+        container.registerConfig(ModConfig.Type.CLIENT, ThrownTridentHitConfig.SPEC, "mrmx_dream/thrown_trident_hit-client.toml");
 
         container.registerExtensionPoint(IConfigScreenFactory.class,
                 (modContainer, screen) -> new GeneralConfigScreen(screen));

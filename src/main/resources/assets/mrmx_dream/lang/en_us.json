@@ -48,6 +48,8 @@
   "mrmx_dream.config.arrow_hit.sound": "Arrow-Hit Sound",
   "mrmx_dream.config.arrow_block_hit.enabled": "Shame",
 
+  "message.mrmx_dream.totem_popped": "± %1$s popped %2$s",
+
 
 
   "creativetab.mrmx_dream.content": "Barliou´s Dream",

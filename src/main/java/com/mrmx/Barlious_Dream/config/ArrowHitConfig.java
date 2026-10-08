@@ -68,8 +68,8 @@ public class ArrowHitConfig {
                 .comment("Define the Pitch of the Arrow-Hit")
                 .translation("dreams_mrmx.config.arrow_hit.pitch").defineInRange("pitch", 1.0, 0.5, 2.0);
         SHAME_ENABLED = builder
-                .comment("Turn On, or Off the Arrow-Block-Hit")
-                .translation("enabled.arrow_block_hit").define("enabled", false);
+                .comment("Turn On, or Off the Arrow-Block-Hit (Shame)")
+                .translation("enabled.arrow_block_hit").define("block_hit_enabled", false);
 
         builder.pop(); SPEC = builder.build();
     }

@@ -1,4 +1,4 @@
-package com.mrmx.Barlious_Dream.item.custom;
+package com.mrmx.Barlious_Dream.item.custom.tools;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
@@ -73,6 +73,7 @@ public class MacheteItem extends AxeItem {
 
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+        tooltipComponents.add(Component.translatable("tooltip_1.mrmx_dream.ender_bag").withStyle(ChatFormatting.GRAY));
         tooltipComponents.add(Component.translatable("tooltip.mrmx_dream.machete")
                 .withStyle(ChatFormatting.GRAY).append(Component.literal(" +4").withStyle(ChatFormatting.GRAY)));
         super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);

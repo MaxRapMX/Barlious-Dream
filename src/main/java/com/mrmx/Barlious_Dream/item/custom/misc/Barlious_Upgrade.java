@@ -1,4 +1,4 @@
-package com.mrmx.Barlious_Dream.item.custom;
+package com.mrmx.Barlious_Dream.item.custom.misc;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;

@@ -1,4 +1,4 @@
-package com.mrmx.Barlious_Dream.item.custom;
+package com.mrmx.Barlious_Dream.item.custom.tools;
 
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Maps;

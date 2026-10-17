@@ -1,4 +1,6 @@
 {
   "replace": false,
-  "values": [ "#mrmx_dream:atoles" ]
+  "values": [
+    { "id": "#mrmx_dream:atoles",
+    "required": false } ]
 }

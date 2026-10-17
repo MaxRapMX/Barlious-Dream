@@ -1,4 +1,4 @@
-package com.mrmx.Barlious_Dream.item.custom;
+package com.mrmx.Barlious_Dream.item.custom.tools;
 
 import com.mrmx.Barlious_Dream.registry.ModAttachments;
 import net.minecraft.ChatFormatting;
@@ -94,16 +94,15 @@ public class PlantWhistleCNC extends Item {
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
         tooltipComponents.add(Component.translatable("tooltip.mrmx_dream.plant_whistle").withStyle(ChatFormatting.GRAY));
         if (Screen.hasShiftDown()) {
-            tooltipComponents.add(Component.translatable("mrmx_dream.keybinds.left-click")
+            tooltipComponents.add(Component.translatable("tooltip.mrmx_dream.keybinds.left-click")
                     .withStyle(ChatFormatting.GREEN).append(Component.translatable("tooltip.mrmx_dream.plant_whistle.left-click").withStyle(ChatFormatting.DARK_GREEN)));
-            tooltipComponents.add(Component.translatable("mrmx_dream.keybinds.right-click")
+            tooltipComponents.add(Component.translatable("tooltip.mrmx_dream.keybinds.right-click")
                     .withStyle(ChatFormatting.GREEN).append(Component.translatable("tooltip.mrmx_dream.plant_whistle.right-click").withStyle(ChatFormatting.DARK_GREEN)));
-            tooltipComponents.add(Component.translatable("mrmx_dream.keybinds.shift_right-click")
+            tooltipComponents.add(Component.translatable("tooltip.mrmx_dream.keybinds.shift_right-click")
                     .withStyle(ChatFormatting.GREEN).append(Component.translatable("tooltip.mrmx_dream.plant_whistle.shift_right-click").withStyle(ChatFormatting.DARK_GREEN)));
         } else {
-            tooltipComponents.add(Component.translatable("mrmx_dream.keybinds.shift")
-                    .withStyle(ChatFormatting.AQUA).append(Component.translatable("tooltip.mrmx_dream.plant_whistle.shift_for_info").withStyle(ChatFormatting.DARK_AQUA)));
+            tooltipComponents.add(Component.translatable("tooltip.mrmx_dream.keybinds.shift")
+                    .withStyle(ChatFormatting.AQUA).append(Component.translatable("tooltip.mrmx_dream.keybinds.shift.description").withStyle(ChatFormatting.DARK_AQUA)));
         }
-        super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
     }
 }

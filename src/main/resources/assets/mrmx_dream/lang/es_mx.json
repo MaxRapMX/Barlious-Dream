@@ -1,8 +1,8 @@
 {
   "mrmx_dream.keybinds.left-click": "Click-Izquierdo ",
-  "mrmx_dream.keybinds.right-click": "Click-Derecho ",
-  "mrmx_dream.keybinds.shift_right-click": "Shift + Click-Derecho ",
-  "mrmx_dream.keybinds.shift": "Shift ",
+  "tooltip.mrmx_dream.keybinds.right-click": "Click-Derecho ",
+  "tooltip.mrmx_dream.keybinds.shift_right-click": "Shift + Click-Derecho ",
+  "tooltip.mrmx_dream.keybinds.shift": "Shift ",
 
   "mrmx_dream.config.general.title": "Configuracion de Barlious Dream",
   "mrmx_dream.config.sound_modules.volume": "Volumen",
@@ -47,6 +47,8 @@
   "mrmx_dream.config.arrow_hit.pacific_mob": "¿Sonido al flechar Mobs Pacificos?",
   "mrmx_dream.config.arrow_hit.sound": "Sonido de Objetivo-Flechado",
   "mrmx_dream.config.arrow_block_hit.enabled": "DESHONRA",
+
+  "message.mrmx_dream.totem_popped": "± %1$s consumió %2$s",
 
 
 

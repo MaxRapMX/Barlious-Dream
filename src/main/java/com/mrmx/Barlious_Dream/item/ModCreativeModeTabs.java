@@ -35,6 +35,8 @@ public class ModCreativeModeTabs {
                         if (ModList.get().isLoaded("corn_delight") && ModList.get().isLoaded("cnc")) output.accept(ModItems.CHERRY_ATOLE);
                         if (ModList.get().isLoaded("corn_delight")) output.accept(ModItems.RICE_PUDING_ATOLE);
                         if (ModList.get().isLoaded("corn_delight")) output.accept(ModItems.CHAMPURRADO);
+                        output.accept(ModItems.CRYING_CHORUS_FRUIT);
+                        output.accept(ModItems.ENDER_BAG);
                     }).build());
 
     public static void register(IEventBus eventBus ) {

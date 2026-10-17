@@ -1,6 +1,6 @@
 package com.mrmx.Barlious_Dream.event.PlantWhistleCNC;
 
-import com.mrmx.Barlious_Dream.item.custom.PlantWhistleCNC;
+import com.mrmx.Barlious_Dream.item.custom.tools.PlantWhistleCNC;
 import com.mrmx.Barlious_Dream.registry.ModAttachments;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.OwnableEntity;

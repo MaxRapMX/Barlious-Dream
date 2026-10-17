@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "mrmx_dream:crying_chorus_fruit"
+  },
+  "base": {
+    "item": "minecraft:ender_chest"
+  },
+  "result": {
+    "count": 1,
+    "id": "mrmx_dream:ender_bag"
+  },
+  "template": {
+    "item": "mrmx_dream:barlious_upgrade_smithing_template"
+  }
+}

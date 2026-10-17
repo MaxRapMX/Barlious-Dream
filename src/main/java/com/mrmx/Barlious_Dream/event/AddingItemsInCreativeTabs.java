@@ -42,6 +42,9 @@ public class AddingItemsInCreativeTabs {
             event.insertAfter(
                     new ItemStack(Items.NETHERITE_AXE), ModItems.NETHERITE_MACHETE.get().getDefaultInstance(),
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.insertAfter(
+                    new ItemStack(Items.ELYTRA), ModItems.ENDER_BAG.get().getDefaultInstance(),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
         }
 
         // Combat
@@ -70,6 +73,9 @@ public class AddingItemsInCreativeTabs {
 
         // Food and Drinks
         if (event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
+            event.insertAfter(
+                    new ItemStack(Items.CHORUS_FRUIT), ModItems.CRYING_CHORUS_FRUIT.get().getDefaultInstance(),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             if (ModList.get().isLoaded("corn_delight"))
                 event.insertAfter(
                     new ItemStack(Items.MILK_BUCKET), ModItems.VANILLA_ATOLE.get().getDefaultInstance(),

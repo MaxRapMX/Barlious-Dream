@@ -2,8 +2,9 @@
   "values": [
     "mrmx_dream:vanilla_atole",
     "mrmx_dream:chocolate_atole",
-    "mrmx_dream:cherry_atole",
     "mrmx_dream:rice_puding_atole",
-    "mrmx_dream:champurrado"
+    "mrmx_dream:champurrado",
+    { "id": "mrmx_dream:cherry_atole",
+      "required": false }
   ]
 }

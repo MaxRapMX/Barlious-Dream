@@ -1,8 +1,6 @@
-package com.mrmx.Barlious_Dream.item.custom;
+package com.mrmx.Barlious_Dream.item.custom.misc;
 
 import net.minecraft.ChatFormatting;
-import net.minecraft.client.gui.screens.Screen;
-import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;

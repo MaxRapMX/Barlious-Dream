@@ -1,4 +1,8 @@
 {
   "replace": false,
-  "values": [ "mrmx_dream:artisanal_cup", "#mrmx_dream:atoles" ]
+  "values": [
+    { "id": "mrmx_dream:artisanal_cup",
+      "required": false },
+    { "id": "#mrmx_dream:atoles",
+    "required": false } ]
 }

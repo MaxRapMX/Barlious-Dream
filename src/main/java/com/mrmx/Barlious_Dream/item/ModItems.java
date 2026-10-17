@@ -1,15 +1,20 @@
 package com.mrmx.Barlious_Dream.item;
 
-import com.mrmx.Barlious_Dream.item.custom.*;
+import com.mrmx.Barlious_Dream.item.custom.foods.AtoleItem;
+import com.mrmx.Barlious_Dream.item.custom.foods.FasterChorusFruitItem;
+import com.mrmx.Barlious_Dream.item.custom.misc.Barlious_Upgrade;
+import com.mrmx.Barlious_Dream.item.custom.misc.Heavy_Heads;
+import com.mrmx.Barlious_Dream.item.custom.tools.Ender_Bag;
+import com.mrmx.Barlious_Dream.item.custom.tools.HeavyPickaxeItem;
+import com.mrmx.Barlious_Dream.item.custom.tools.MacheteItem;
+import com.mrmx.Barlious_Dream.item.custom.tools.PlantWhistleCNC;
 import com.mrmx.Barlious_Dream.registry.Barlious_Dream;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.PickaxeItem;
-import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModList;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -23,14 +28,17 @@ public class ModItems {
     public static final DeferredRegister.Items TOOLS = DeferredRegister.createItems(Barlious_Dream.MODID);
 
     public static final DeferredItem<Item> BARLIOUS_DREAM_LOGO = ITEMS.register("logo",
-            () -> new Item(new Item.Properties().stacksTo(1).fireResistant()));
+            () -> new Item(new Item.Properties().stacksTo(1).fireResistant().rarity(Rarity.RARE)));
     public static final DeferredItem<Item> BARLIOUS_UPGRADE = ITEMS.register("barlious_upgrade_smithing_template",
-            () -> new Barlious_Upgrade(new Item.Properties().stacksTo(8).fireResistant()));
+            () -> new Barlious_Upgrade(new Item.Properties().stacksTo(8)));
+
+    public static final DeferredItem<FasterChorusFruitItem> CRYING_CHORUS_FRUIT = ITEMS.register("crying_chorus_fruit",
+            () -> new FasterChorusFruitItem(new Item.Properties().food(Food_Dreamed.CRYING_CHORUS_FRUIT)));
 
     // Atoles
     public static final DeferredItem<Item> ARTISANAL_CUP = CORN_DELIGHT_REQUIRED
             ? ITEMS.register("artisanal_cup",
-            () -> new Item(new Item.Properties())): null;
+            () -> new Item(new Item.Properties().stacksTo(16))): null;
     public static final DeferredItem<AtoleItem> VANILLA_ATOLE = CORN_DELIGHT_REQUIRED
         ? ITEMS.register("vanilla_atole",
             () -> new AtoleItem(new Item.Properties().durability(32).food(Atoles.VANILLA_ATOLE))): null;
@@ -80,7 +88,24 @@ public class ModItems {
     // Extra
     public static final DeferredItem<Item> PLANT_WHISTLE = CNC_REQUIRED
             ? ITEMS.register("plant_whistle",
-            () -> new PlantWhistleCNC(new Item.Properties().stacksTo(1))): null;
+            () -> new PlantWhistleCNC(new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON))): null;
+    public static final DeferredItem<Ender_Bag> ENDER_BAG = ITEMS.register("ender_bag",
+            () -> new Ender_Bag(new Item.Properties().stacksTo(1).rarity(Rarity.EPIC)));
+
+    static class Food_Dreamed {
+        public static final FoodProperties CRYING_CHORUS_FRUIT;
+        Food_Dreamed() {}
+        static {
+            var CryingChorusFruit = (new FoodProperties.Builder()).nutrition(4).saturationModifier(1.2F).alwaysEdible().fast()
+                    .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 300, 1), 1.0F)
+                    .effect(() -> new MobEffectInstance(MobEffects.ABSORPTION, 2400, 1), 1.0F)
+                    .effect(() -> new MobEffectInstance(MobEffects.HEAL, 10, 0), 0.35F)
+                    .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 6000, 0), 1.0F)
+                    .effect(() -> new MobEffectInstance(MobEffects.SLOW_FALLING, 300, 0), 1.0F)
+                    .effect(() -> new MobEffectInstance(MobEffects.NIGHT_VISION, 7200, 0), 1.0F);
+            CRYING_CHORUS_FRUIT = CryingChorusFruit.build();
+        }
+    }
 
     static class Atoles {
         public static final FoodProperties VANILLA_ATOLE;

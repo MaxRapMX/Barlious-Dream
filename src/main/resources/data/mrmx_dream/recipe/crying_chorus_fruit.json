@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "b": {
+      "item": "minecraft:chorus_fruit"
+    },
+    "c": {
+      "item": "minecraft:crying_obsidian"
+    }
+  },
+  "pattern": [
+    "ccc",
+    "cbc",
+    "ccc"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mrmx_dream:crying_chorus_fruit"
+  }
+}

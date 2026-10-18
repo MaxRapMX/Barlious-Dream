@@ -1,6 +1,6 @@
 package com.mrmx.Barlious_Dream.event;
 
-import com.mrmx.Barlious_Dream.config.ArrowHitConfig;
+import com.mrmx.Barlious_Dream.config.ModulesEnabler;
 import com.mrmx.Barlious_Dream.config.ThrownTridentHitConfig;
 import com.mrmx.Barlious_Dream.registry.Barlious_Dream;
 import com.mrmx.Barlious_Dream.sound.ModSounds;
@@ -10,7 +10,6 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.NeutralMob;
 import net.minecraft.world.entity.monster.Enemy;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.projectile.ThrownTrident;
 import net.minecraft.world.level.block.TargetBlock;
 import net.minecraft.world.level.block.state.BlockState;
@@ -25,7 +24,7 @@ public class ThrownTridentHitConfirmed {
 
     @SubscribeEvent
     public static void onProjectileImpact(ProjectileImpactEvent event) {
-        if (!ThrownTridentHitConfig.ENABLED.get()) { return; }
+        if (!ModulesEnabler.THROWN_TRIDENT_HIT_ENABLED.get()) { return; }
         if (!(event.getEntity()instanceof ThrownTrident trident)) { return; }
         if (trident.level().isClientSide()) { return; }
 

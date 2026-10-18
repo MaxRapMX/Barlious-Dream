@@ -1,5 +1,6 @@
 package com.mrmx.Barlious_Dream.event;
 
+import com.mrmx.Barlious_Dream.config.ModulesEnabler;
 import com.mrmx.Barlious_Dream.config.ThrownTridentHitConfig;
 import com.mrmx.Barlious_Dream.registry.Barlious_Dream;
 import com.mrmx.Barlious_Dream.sound.ModSounds;
@@ -23,7 +24,7 @@ public class ThrownTridentHitConfirmed {
 
     @SubscribeEvent
     public static void onProjectileImpact(ProjectileImpactEvent event) {
-        if (!ThrownTridentHitConfig.ENABLED.get()) { return; }
+        if (!ModulesEnabler.THROWN_TRIDENT_HIT_ENABLED.get()) { return; }
         if (!(event.getEntity()instanceof ThrownTrident trident)) { return; }
         if (trident.level().isClientSide()) { return; }
 

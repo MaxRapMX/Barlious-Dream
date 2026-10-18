@@ -2,6 +2,7 @@ package com.mrmx.Barlious_Dream.config.config_screen;
 
 import com.mrmx.Barlious_Dream.config.GamePauseConfig;
 import com.mrmx.Barlious_Dream.config.KillConfirmConfig;
+import com.mrmx.Barlious_Dream.config.ModulesEnabler;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.components.AbstractSliderButton;
 import net.minecraft.client.gui.components.Button;
@@ -14,7 +15,7 @@ public class GamePauseConfigScreen extends Screen {
     private final Screen parent;
 
     public GamePauseConfigScreen(Screen parent) {
-        super(Component.translatable("mrmx_dream.config.game_pause.title"));
+        super(Component.translatable("mrmx_dream.module.game_pause_module"));
         this.parent = parent;
     }
 
@@ -24,7 +25,7 @@ public class GamePauseConfigScreen extends Screen {
         } @Override
         protected void updateMessage() {
             double realValue = Math.round(this.value * 3.0 * 100.0) / 100.0;
-            this.setMessage(Component.translatable("mrmx_dream.config.sound_modules.volume").append(": " + realValue));
+            this.setMessage(Component.translatable("mrmx_dream.config.sound.volume").append(": " + realValue));
         } @Override
         protected void applyValue() {
             GamePauseConfig.VOLUME.set(this.value * 3.0);
@@ -37,7 +38,7 @@ public class GamePauseConfigScreen extends Screen {
         } @Override
         protected void updateMessage() {
             double realValue = Math.round((0.5 + this.value * 1.5) * 100.0) / 100.0;
-            this.setMessage(Component.translatable("mrmx_dream.config.sound_modules.pitch").append(": " + realValue));
+            this.setMessage(Component.translatable("mrmx_dream.config.sound.pitch").append(": " + realValue));
         } @Override
         protected void applyValue() {
             GamePauseConfig.PITCH.set(0.5 + this.value * 1.5);
@@ -45,18 +46,19 @@ public class GamePauseConfigScreen extends Screen {
     }
 
     @Override
-    public void onClose() { GamePauseConfig.SPEC.save(); this.minecraft.setScreen(parent); }
+    public void onClose() {
+        ModulesEnabler.SPEC.save(); GamePauseConfig.SPEC.save(); this.minecraft.setScreen(parent); }
 
     @Override
     protected void init() {
         int X_ScreenCenter = this.width / 2; int y = 40; int Menu_Spacing = 26;
 
         this.addRenderableWidget(Checkbox.builder(
-                Component.translatable("mrmx_dream.config.game_pause.enabled"), this.font)
-                .pos(X_ScreenCenter - 60, 20).selected(GamePauseConfig.ENABLED.get())
-                .onValueChange((checkbox, value) -> GamePauseConfig.ENABLED.set(value)).build());
+                Component.translatable("mrmx_dream.module.game_pause_module"), this.font)
+                .pos(X_ScreenCenter - 60, 20).selected(ModulesEnabler.GAME_PAUSE_ENABLED.get())
+                .onValueChange((checkbox, value) -> ModulesEnabler.GAME_PAUSE_ENABLED.set(value)).build());
         y += Menu_Spacing; this.addRenderableWidget(Button.builder(
-                Component.translatable("mrmx_dream.config.sound_modules.sound_test"),
+                Component.translatable("mrmx_dream.config.sound.test"),
                         button -> { var player = Minecraft.getInstance().player;
                             if (player != null) {
                                 player.playSound(
@@ -70,7 +72,7 @@ public class GamePauseConfigScreen extends Screen {
                 CycleButton.builder((GamePauseConfig.GamePauseSoundOption option) -> Component.literal(option.name()))
                         .withValues(GamePauseConfig.GamePauseSoundOption.values()).withInitialValue(GamePauseConfig.SOUND.get())
                         .create(X_ScreenCenter - 90, y, 180, 20,
-                                Component.translatable("mrmx_dream.config.game_pause.sound"),
+                                Component.translatable("mrmx_dream.module.game_pause.config.sound"),
                                 (button, value) -> GamePauseConfig.SOUND.set(value)));
         y += Menu_Spacing; double currentVolume = GamePauseConfig.VOLUME.get();
         this.addRenderableWidget(new GamePauseConfigScreen.VolumeSlider(X_ScreenCenter - 90, y, 180, 20, currentVolume / 3.0));

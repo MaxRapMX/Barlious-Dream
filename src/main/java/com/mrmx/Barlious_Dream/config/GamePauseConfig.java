@@ -26,7 +26,6 @@ public class GamePauseConfig {
 
     public static final ModConfigSpec SPEC;
 
-    public static final ModConfigSpec.BooleanValue ENABLED;
     public static final ModConfigSpec.EnumValue<GamePauseSoundOption> SOUND;
     public static final ModConfigSpec.DoubleValue VOLUME;
     public static final ModConfigSpec.DoubleValue PITCH;
@@ -35,9 +34,6 @@ public class GamePauseConfig {
         ModConfigSpec.Builder builder = new ModConfigSpec.Builder();
         builder.push("game_pause");
 
-        ENABLED = builder
-                .comment("Turn On, or Off the Game-Pause Module")
-                .translation("enabled.game_pause").define("enabled", true);
         SOUND = builder
                 .comment("Choose the sound that plays the Game-Pause")
                 .translation("mrmx_dream.config.game_pause.sound").defineEnum("sound", GamePauseSoundOption.MC_Click);

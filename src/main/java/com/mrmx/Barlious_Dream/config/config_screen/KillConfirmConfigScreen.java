@@ -1,6 +1,7 @@
 package com.mrmx.Barlious_Dream.config.config_screen;
 
 import com.mrmx.Barlious_Dream.config.KillConfirmConfig;
+import com.mrmx.Barlious_Dream.config.ModulesEnabler;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.components.AbstractSliderButton;
 import net.minecraft.client.gui.components.Button;
@@ -13,7 +14,7 @@ public class KillConfirmConfigScreen extends Screen {
     private final Screen parent;
 
     public KillConfirmConfigScreen(Screen parent) {
-        super(Component.translatable("mrmx_dream.config.kill_confirm.title"));
+        super(Component.translatable("mrmx_dream.module.kill_confirm_module"));
         this.parent = parent;
     }
 
@@ -23,7 +24,7 @@ public class KillConfirmConfigScreen extends Screen {
         } @Override
         protected void updateMessage() {
             double realValue = Math.round(this.value * 3.0 * 100.0) / 100.0;
-            this.setMessage(Component.translatable("mrmx_dream.config.sound_modules.volume").append(": " + realValue));
+            this.setMessage(Component.translatable("mrmx_dream.config.sound.volume").append(": " + realValue));
         } @Override
         protected void applyValue() {
             KillConfirmConfig.VOLUME.set(this.value * 3.0);
@@ -36,7 +37,7 @@ public class KillConfirmConfigScreen extends Screen {
         } @Override
         protected void updateMessage() {
             double realValue = Math.round((0.5 + this.value * 1.5) * 100.0) / 100.0;
-            this.setMessage(Component.translatable("mrmx_dream.config.sound_modules.pitch").append(": " + realValue));
+            this.setMessage(Component.translatable("mrmx_dream.config.sound.pitch").append(": " + realValue));
         } @Override
         protected void applyValue() {
             KillConfirmConfig.PITCH.set(0.5 + this.value * 1.5);
@@ -44,40 +45,42 @@ public class KillConfirmConfigScreen extends Screen {
     }
 
     @Override
-    public void onClose() { KillConfirmConfig.SPEC.save(); this.minecraft.setScreen(parent); }
+    public void onClose() {
+        ModulesEnabler.SPEC.save(); KillConfirmConfig.SPEC.save(); this.minecraft.setScreen(parent);
+    }
 
     @Override
     protected void init() {
         int X_ScreenCenter = this.width / 2; int y = 40; int Menu_Spacing = 26;
 
         this.addRenderableWidget(Checkbox.builder(
-                Component.translatable("mrmx_dream.config.kill_confirm.enabled"), this.font)
-                .pos(X_ScreenCenter - 60, 20).selected(KillConfirmConfig.ENABLED.get())
-                .onValueChange((checkbox, value) -> KillConfirmConfig.ENABLED.set(value)).build());
+                Component.translatable("mrmx_dream.module.kill_confirm_module"), this.font)
+                .pos(X_ScreenCenter - 60, 20).selected(ModulesEnabler.KILL_CONFIRM_ENABLED.get())
+                .onValueChange((checkbox, value) -> ModulesEnabler.KILL_CONFIRM_ENABLED.set(value)).build());
 
 
 
         y += Menu_Spacing; this.addRenderableWidget(Checkbox.builder(
-                Component.translatable("mrmx_dream.config.kill_confirm.players"), this.font)
+                Component.translatable("mrmx_dream.module.kill_confirm.config.players"), this.font)
                 .pos(X_ScreenCenter - 175, y).selected(KillConfirmConfig.PLAYER_ENABLED.get())
                 .onValueChange((checkbox, value) -> KillConfirmConfig.PLAYER_ENABLED.set(value)).build());
         this.addRenderableWidget(Checkbox.builder(
-                Component.translatable("mrmx_dream.config.kill_confirm.enemy_mob"), this.font)
+                Component.translatable("mrmx_dream.module.kill_confirm.config.enemy_mob"), this.font)
                 .pos(X_ScreenCenter + 25, y).selected(KillConfirmConfig.ENEMY_ENABLED.get())
                 .onValueChange((checkbox, value) -> KillConfirmConfig.ENEMY_ENABLED.set(value)).build());
         y += Menu_Spacing; this.addRenderableWidget(Checkbox.builder(
-                Component.translatable("mrmx_dream.config.kill_confirm.neutral_mob"), this.font)
+                Component.translatable("mrmx_dream.module.kill_confirm.config.neutral_mob"), this.font)
                 .pos(X_ScreenCenter - 175, y).selected(KillConfirmConfig.NEUTRAL_ENABLED.get())
                 .onValueChange((checkbox, value) -> KillConfirmConfig.NEUTRAL_ENABLED.set(value)).build());
         this.addRenderableWidget(Checkbox.builder(
-                Component.translatable("mrmx_dream.config.kill_confirm.pacific_mob"), this.font)
+                Component.translatable("mrmx_dream.module.kill_confirm.config.pacific_mob"), this.font)
                 .pos(X_ScreenCenter + 25, y).selected(KillConfirmConfig.PACIFIC_ENABLED.get())
                 .onValueChange((checkbox, value) -> KillConfirmConfig.PACIFIC_ENABLED.set(value)).build());
 
 
 
         y += Menu_Spacing; y += Menu_Spacing; this.addRenderableWidget(Button.builder(
-                Component.translatable("mrmx_dream.config.sound_modules.sound_test"),
+                Component.translatable("mrmx_dream.config.sound.test"),
                         button -> { var player = Minecraft.getInstance().player;
                             if (player != null) {
                                 player.playSound(
@@ -91,7 +94,7 @@ public class KillConfirmConfigScreen extends Screen {
                 CycleButton.builder((KillConfirmConfig.KillConfirmSoundOption option) -> Component.literal(option.name()))
                         .withValues(KillConfirmConfig.KillConfirmSoundOption.values()).withInitialValue(KillConfirmConfig.SOUND.get())
                         .create(X_ScreenCenter + 10, y, 180, 20,
-                                Component.translatable("mrmx_dream.config.kill_confirm.sound"),
+                                Component.translatable("mrmx_dream.module.kill_confirm.config.sound"),
                                 (button, value) -> KillConfirmConfig.SOUND.set(value)));
 
 

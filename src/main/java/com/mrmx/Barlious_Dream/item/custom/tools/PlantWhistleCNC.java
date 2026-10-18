@@ -103,6 +103,6 @@ public class PlantWhistleCNC extends Item {
         } else {
             tooltipComponents.add(Component.translatable("tooltip.mrmx_dream.keybinds.shift")
                     .withStyle(ChatFormatting.AQUA).append(Component.translatable("tooltip.mrmx_dream.keybinds.shift.description").withStyle(ChatFormatting.DARK_AQUA)));
-        }
+        } super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
     }
 }

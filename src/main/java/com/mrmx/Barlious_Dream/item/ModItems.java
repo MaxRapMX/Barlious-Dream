@@ -9,7 +9,9 @@ import com.mrmx.Barlious_Dream.item.custom.tools.HeavyPickaxeItem;
 import com.mrmx.Barlious_Dream.item.custom.tools.MacheteItem;
 import com.mrmx.Barlious_Dream.item.custom.tools.PlantWhistleCNC;
 import com.mrmx.Barlious_Dream.registry.Barlious_Dream;
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -20,6 +22,8 @@ import net.neoforged.fml.ModList;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
+import java.util.List;
+
 public class ModItems {
     public static final boolean CNC_REQUIRED = ModList.get().isLoaded("cnc");
     public static final boolean CORN_DELIGHT_REQUIRED = ModList.get().isLoaded("corn_delight");
@@ -28,12 +32,48 @@ public class ModItems {
     public static final DeferredRegister.Items TOOLS = DeferredRegister.createItems(Barlious_Dream.MODID);
 
     public static final DeferredItem<Item> BARLIOUS_DREAM_LOGO = ITEMS.register("logo",
-            () -> new Item(new Item.Properties().stacksTo(1).fireResistant().rarity(Rarity.RARE)));
+            () -> new Item(new Item.Properties().stacksTo(1).fireResistant().rarity(Rarity.RARE)) {
+                @Override
+                public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+                    tooltipComponents.add(Component.translatable("tooltip.mrmx_dream.logo").withStyle(ChatFormatting.GRAY));
+                    super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+                }
+            });
     public static final DeferredItem<Item> BARLIOUS_UPGRADE = ITEMS.register("barlious_upgrade_smithing_template",
             () -> new Barlious_Upgrade(new Item.Properties().stacksTo(8)));
 
+    // Miscelaneos
     public static final DeferredItem<FasterChorusFruitItem> CRYING_CHORUS_FRUIT = ITEMS.register("crying_chorus_fruit",
-            () -> new FasterChorusFruitItem(new Item.Properties().food(Food_Dreamed.CRYING_CHORUS_FRUIT)));
+            () -> new FasterChorusFruitItem(new Item.Properties().rarity(Rarity.RARE).food(Food_Dreamed.CRYING_CHORUS_FRUIT)));
+
+    // Machetes; 1.3 mas de daño, pero 1.16 mas lento que las espadas
+    public static final DeferredItem<MacheteItem> IRON_MACHETE = TOOLS.register("iron_machete",
+            () -> new MacheteItem(ModToolTiers.IRON_MACHETE, new Item.Properties()
+                    .attributes(SwordItem.createAttributes(ModToolTiers.IRON_MACHETE, 4, -2.7f))));
+    public static final DeferredItem<MacheteItem> DIAMOND_MACHETE = TOOLS.register("diamond_machete",
+            () -> new MacheteItem(ModToolTiers.DIAMOND_MACHETE, new Item.Properties()
+                    .attributes(SwordItem.createAttributes(ModToolTiers.DIAMOND_MACHETE, 4, -2.7f))));
+    public static final DeferredItem<MacheteItem> NETHERITE_MACHETE = TOOLS.register("netherite_machete",
+            () -> new MacheteItem(ModToolTiers.NETHERITE_MACHETE, new Item.Properties().fireResistant()
+                    .attributes(SwordItem.createAttributes(ModToolTiers.NETHERITE_MACHETE, 4, -2.7f))));
+
+    // Cabezales de Picos reforzados; para mejorar los picos vanilla
+    public static final DeferredItem<Item> IRON_HEAVY_HEAD = ITEMS.register("iron_heavy_head",
+            () -> new Heavy_Heads(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> DIAMOND_HEAVY_HEAD = ITEMS.register("diamond_heavy_head",
+            () -> new Heavy_Heads(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> NETHERITE_HEAVY_HEAD = ITEMS.register("netherite_heavy_head",
+            () -> new Heavy_Heads(new Item.Properties().stacksTo(1).fireResistant()));
+    // Picos reforzados; +1 de daño, pero +3 de coldoown
+    public static final DeferredItem<HeavyPickaxeItem> IRON_HEAVY_PICKAXE = TOOLS.register("iron_heavy_pickaxe",
+            () -> new HeavyPickaxeItem(ModToolTiers.IRON_HEAVY_PICKAXE, new Item.Properties()
+                    .attributes(PickaxeItem.createAttributes(ModToolTiers.IRON_HEAVY_PICKAXE, 2.0f, -3.1f))));
+    public static final DeferredItem<HeavyPickaxeItem> DIAMOND_HEAVY_PICKAXE = TOOLS.register("diamond_heavy_pickaxe",
+            () -> new HeavyPickaxeItem(ModToolTiers.DIAMOND_HEAVY_PICKAXE, new Item.Properties()
+                    .attributes(PickaxeItem.createAttributes(ModToolTiers.DIAMOND_HEAVY_PICKAXE, 2.0f, -3.1f))));
+    public static final DeferredItem<HeavyPickaxeItem> NETHERITE_HEAVY_PICKAXE = TOOLS.register("netherite_heavy_pickaxe",
+            () -> new HeavyPickaxeItem(ModToolTiers.NETHERITE_HEAVY_PICKAXE, new Item.Properties().fireResistant()
+                    .attributes(PickaxeItem.createAttributes(ModToolTiers.NETHERITE_HEAVY_PICKAXE, 2.0f, -3.1f))));
 
     // Atoles
     public static final DeferredItem<Item> ARTISANAL_CUP = CORN_DELIGHT_REQUIRED
@@ -55,42 +95,12 @@ public class ModItems {
             ? ITEMS.register("champurrado",
             () -> new AtoleItem(new Item.Properties().durability(32).food(Atoles.CHAMPURRADO))): null;
 
-    // Cabezales de Picos reforzados; para mejorar los picos vanilla
-    public static final DeferredItem<Item> IRON_HEAVY_HEAD = ITEMS.register("iron_heavy_head",
-            () -> new Heavy_Heads(new Item.Properties().stacksTo(1)));
-    public static final DeferredItem<Item> DIAMOND_HEAVY_HEAD = ITEMS.register("diamond_heavy_head",
-            () -> new Heavy_Heads(new Item.Properties().stacksTo(1)));
-    public static final DeferredItem<Item> NETHERITE_HEAVY_HEAD = ITEMS.register("netherite_heavy_head",
-            () -> new Heavy_Heads(new Item.Properties().stacksTo(1).fireResistant()));
-
-    // Machetes; 1.3 mas de daño, pero 1.16 mas lento que las espadas
-    public static final DeferredItem<MacheteItem> IRON_MACHETE = TOOLS.register("iron_machete",
-            () -> new MacheteItem(ModToolTiers.IRON_MACHETE, new Item.Properties()
-                    .attributes(SwordItem.createAttributes(ModToolTiers.IRON_MACHETE, 4, -2.7f))));
-    public static final DeferredItem<MacheteItem> DIAMOND_MACHETE = TOOLS.register("diamond_machete",
-            () -> new MacheteItem(ModToolTiers.DIAMOND_MACHETE, new Item.Properties()
-                    .attributes(SwordItem.createAttributes(ModToolTiers.DIAMOND_MACHETE, 4, -2.7f))));
-    public static final DeferredItem<MacheteItem> NETHERITE_MACHETE = TOOLS.register("netherite_machete",
-            () -> new MacheteItem(ModToolTiers.NETHERITE_MACHETE, new Item.Properties().fireResistant()
-                    .attributes(SwordItem.createAttributes(ModToolTiers.NETHERITE_MACHETE, 4, -2.7f))));
-
-    // Picos reforzados; +1 de daño, pero +3 de coldoown
-    public static final DeferredItem<HeavyPickaxeItem> IRON_HEAVY_PICKAXE = TOOLS.register("iron_heavy_pickaxe",
-            () -> new HeavyPickaxeItem(ModToolTiers.IRON_HEAVY_PICKAXE, new Item.Properties()
-                    .attributes(PickaxeItem.createAttributes(ModToolTiers.IRON_HEAVY_PICKAXE, 2.0f, -3.1f))));
-    public static final DeferredItem<HeavyPickaxeItem> DIAMOND_HEAVY_PICKAXE = TOOLS.register("diamond_heavy_pickaxe",
-            () -> new HeavyPickaxeItem(ModToolTiers.DIAMOND_HEAVY_PICKAXE, new Item.Properties()
-                    .attributes(PickaxeItem.createAttributes(ModToolTiers.DIAMOND_HEAVY_PICKAXE, 2.0f, -3.1f))));
-    public static final DeferredItem<HeavyPickaxeItem> NETHERITE_HEAVY_PICKAXE = TOOLS.register("netherite_heavy_pickaxe",
-            () -> new HeavyPickaxeItem(ModToolTiers.NETHERITE_HEAVY_PICKAXE, new Item.Properties().fireResistant()
-                    .attributes(PickaxeItem.createAttributes(ModToolTiers.NETHERITE_HEAVY_PICKAXE, 2.0f, -3.1f))));
-
     // Extra
-    public static final DeferredItem<Item> PLANT_WHISTLE = CNC_REQUIRED
-            ? ITEMS.register("plant_whistle",
-            () -> new PlantWhistleCNC(new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON))): null;
-    public static final DeferredItem<Ender_Bag> ENDER_BAG = ITEMS.register("ender_bag",
+    public static final DeferredItem<Ender_Bag> ENDER_BAG = TOOLS.register("ender_bag",
             () -> new Ender_Bag(new Item.Properties().stacksTo(1).rarity(Rarity.EPIC)));
+    public static final DeferredItem<Item> PLANT_WHISTLE = CNC_REQUIRED
+            ? TOOLS.register("plant_whistle",
+            () -> new PlantWhistleCNC(new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON))): null;
 
     static class Food_Dreamed {
         public static final FoodProperties CRYING_CHORUS_FRUIT;

@@ -28,7 +28,6 @@ public class ArrowHitConfig {
 
     public static final ModConfigSpec SPEC;
 
-    public static final ModConfigSpec.BooleanValue ENABLED;
     public static final ModConfigSpec.BooleanValue PLAYER_ENABLED;
     public static final ModConfigSpec.BooleanValue ENEMY_ENABLED;
     public static final ModConfigSpec.BooleanValue NEUTRAL_ENABLED;
@@ -43,9 +42,6 @@ public class ArrowHitConfig {
         ModConfigSpec.Builder builder = new ModConfigSpec.Builder();
         builder.push("arrow_hit");
 
-        ENABLED = builder
-                .comment("Turn On, or Off the Arrow-Hit Module")
-                .translation("enabled.arrow_hit").define("enabled", false);
         PLAYER_ENABLED = builder
                 .comment("Turn On, or Off the Arrow-Hit when you defeat a Player (PvP)")
                 .translation("player.arrow_hit").define("player_enabled", true);

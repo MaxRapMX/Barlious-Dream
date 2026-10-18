@@ -1,6 +1,7 @@
 package com.mrmx.Barlious_Dream.event;
 
 import com.mrmx.Barlious_Dream.config.ArrowHitConfig;
+import com.mrmx.Barlious_Dream.config.ModulesEnabler;
 import com.mrmx.Barlious_Dream.registry.Barlious_Dream;
 import com.mrmx.Barlious_Dream.sound.ModSounds;
 import net.minecraft.server.level.ServerPlayer;
@@ -24,7 +25,7 @@ public class ArrowHitConfirmed {
 
     @SubscribeEvent
     public static void onProjectileImpact(ProjectileImpactEvent event) {
-        if (!ArrowHitConfig.ENABLED.get()) { return; }
+        if (!ModulesEnabler.ARROW_HIT_ENABLED.get()) { return; }
         if (!(event.getEntity()instanceof AbstractArrow arrow && !(event.getEntity()instanceof ThrownTrident))) { return; }
         if (arrow.level().isClientSide()) { return; }
 

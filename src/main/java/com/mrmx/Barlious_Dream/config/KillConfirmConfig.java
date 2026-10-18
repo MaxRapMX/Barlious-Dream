@@ -32,7 +32,6 @@ public class KillConfirmConfig {
 
     public static final ModConfigSpec SPEC;
 
-    public static final ModConfigSpec.BooleanValue ENABLED;
     public static final ModConfigSpec.BooleanValue PLAYER_ENABLED;
     public static final ModConfigSpec.BooleanValue ENEMY_ENABLED;
     public static final ModConfigSpec.BooleanValue NEUTRAL_ENABLED;
@@ -46,9 +45,6 @@ public class KillConfirmConfig {
         ModConfigSpec.Builder builder = new ModConfigSpec.Builder();
         builder.push("kill_confirm");
 
-        ENABLED = builder
-                .comment("Turn On, or Off the Kill-Confirm Module")
-                .translation("enabled.kill_confirm").define("enabled", true);
         PLAYER_ENABLED = builder
                 .comment("Turn On, or Off the Kill-Confirm when you defeat a Player (PvP)")
                 .translation("player.kill_confirm").define("player_enabled", true);

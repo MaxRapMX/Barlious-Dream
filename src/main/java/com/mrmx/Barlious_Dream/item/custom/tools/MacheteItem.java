@@ -73,9 +73,9 @@ public class MacheteItem extends AxeItem {
 
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
-        tooltipComponents.add(Component.translatable("tooltip_1.mrmx_dream.ender_bag").withStyle(ChatFormatting.GRAY));
-        tooltipComponents.add(Component.translatable("tooltip.mrmx_dream.machete")
-                .withStyle(ChatFormatting.GRAY).append(Component.literal(" +4").withStyle(ChatFormatting.GRAY)));
+        tooltipComponents.add(Component.translatable("tooltip.mrmx_dream.machete").withStyle(ChatFormatting.GRAY));
+        tooltipComponents.add(Component.translatable("tooltip.mrmx_dream.machete.bonus")
+                .withStyle(ChatFormatting.BLUE).append(Component.literal(" +4").withStyle(ChatFormatting.BLUE)));
         super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
     }
 }

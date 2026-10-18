@@ -2,6 +2,7 @@ package com.mrmx.Barlious_Dream.config.config_screen;
 
 import com.mrmx.Barlious_Dream.config.ArrowHitConfig;
 import com.mrmx.Barlious_Dream.config.KillConfirmConfig;
+import com.mrmx.Barlious_Dream.config.ModulesEnabler;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.components.AbstractSliderButton;
 import net.minecraft.client.gui.components.Button;
@@ -14,7 +15,7 @@ public class ArrowHitConfigScreen extends Screen {
     private final Screen parent;
 
     public ArrowHitConfigScreen(Screen parent) {
-        super(Component.translatable("mrmx_dream.config.arrow_hit.title"));
+        super(Component.translatable("mrmx_dream.module.arrow_hit_module"));
         this.parent = parent;
     }
 
@@ -24,7 +25,7 @@ public class ArrowHitConfigScreen extends Screen {
         } @Override
         protected void updateMessage() {
             double realValue = Math.round(this.value * 2.0 * 100.0) / 100.0;
-            this.setMessage(Component.translatable("mrmx_dream.config.sound_modules.volume").append(": " + realValue));
+            this.setMessage(Component.translatable("mrmx_dream.config.sound.volume").append(": " + realValue));
         } @Override
         protected void applyValue() {
             ArrowHitConfig.VOLUME.set(this.value * 2.0);
@@ -37,46 +38,47 @@ public class ArrowHitConfigScreen extends Screen {
         } @Override
         protected void updateMessage() {
             double realValue = Math.round((0.5 + this.value * 1.5) * 100.0) / 100.0;
-            this.setMessage(Component.translatable("mrmx_dream.config.sound_modules.pitch").append(": " + realValue));
+            this.setMessage(Component.translatable("mrmx_dream.config.sound.pitch").append(": " + realValue));
         } @Override
         protected void applyValue() { ArrowHitConfig.PITCH.set(0.5 + this.value * 1.5); }
     }
 
     @Override
-    public void onClose() { ArrowHitConfig.SPEC.save(); this.minecraft.setScreen(parent); }
+    public void onClose() {
+        ModulesEnabler.SPEC.save(); ArrowHitConfig.SPEC.save(); this.minecraft.setScreen(parent); }
 
     @Override
     protected void init() {
         int X_ScreenCenter = this.width / 2; int y = 40; int Menu_Spacing = 26;
 
         this.addRenderableWidget(Checkbox.builder(
-                        Component.translatable("mrmx_dream.config.arrow_hit.enabled"), this.font)
-                .pos(X_ScreenCenter - 60, 20).selected(ArrowHitConfig.ENABLED.get())
-                .onValueChange((checkbox, value) -> ArrowHitConfig.ENABLED.set(value)).build());
+                        Component.translatable("mrmx_dream.module.arrow_hit_module"), this.font)
+                .pos(X_ScreenCenter - 60, 20).selected(ModulesEnabler.ARROW_HIT_ENABLED.get())
+                .onValueChange((checkbox, value) -> ModulesEnabler.ARROW_HIT_ENABLED.set(value)).build());
 
 
 
         y += Menu_Spacing; this.addRenderableWidget(Checkbox.builder(
-                        Component.translatable("mrmx_dream.config.arrow_hit.players"), this.font)
+                        Component.translatable("mrmx_dream.module.arrow_hit.config.players"), this.font)
                 .pos(X_ScreenCenter - 175, y).selected(ArrowHitConfig.PLAYER_ENABLED.get())
                 .onValueChange((checkbox, value) -> ArrowHitConfig.PLAYER_ENABLED.set(value)).build());
         this.addRenderableWidget(Checkbox.builder(
-                        Component.translatable("mrmx_dream.config.arrow_hit.enemy_mob"), this.font)
+                        Component.translatable("mrmx_dream.module.arrow_hit.config.enemy_mob"), this.font)
                 .pos(X_ScreenCenter + 25, y).selected(ArrowHitConfig.ENEMY_ENABLED.get())
                 .onValueChange((checkbox, value) -> ArrowHitConfig.ENEMY_ENABLED.set(value)).build());
         y += Menu_Spacing; this.addRenderableWidget(Checkbox.builder(
-                        Component.translatable("mrmx_dream.config.arrow_hit.neutral_mob"), this.font)
+                        Component.translatable("mrmx_dream.module.arrow_hit.config.neutral_mob"), this.font)
                 .pos(X_ScreenCenter - 175, y).selected(ArrowHitConfig.NEUTRAL_ENABLED.get())
                 .onValueChange((checkbox, value) -> ArrowHitConfig.NEUTRAL_ENABLED.set(value)).build());
         this.addRenderableWidget(Checkbox.builder(
-                        Component.translatable("mrmx_dream.config.arrow_hit.pacific_mob"), this.font)
+                        Component.translatable("mrmx_dream.module.arrow_hit.config.pacific_mob"), this.font)
                 .pos(X_ScreenCenter + 25, y).selected(ArrowHitConfig.PACIFIC_ENABLED.get())
                 .onValueChange((checkbox, value) -> ArrowHitConfig.PACIFIC_ENABLED.set(value)).build());
 
 
 
         y += Menu_Spacing; this.addRenderableWidget(Button.builder(
-                Component.translatable("mrmx_dream.config.sound_modules.sound_test"),
+                Component.translatable("mrmx_dream.config.sound.test"),
                 button -> { var player = Minecraft.getInstance().player;
                     if (player != null) {
                         player.playSound(
@@ -90,7 +92,7 @@ public class ArrowHitConfigScreen extends Screen {
                 CycleButton.builder((ArrowHitConfig.ArrowHitSoundOption option) -> Component.literal(option.name()))
                         .withValues(ArrowHitConfig.ArrowHitSoundOption.values()).withInitialValue(ArrowHitConfig.SOUND.get())
                         .create(X_ScreenCenter + 10, y, 180, 20,
-                                Component.translatable("mrmx_dream.config.arrow_hit.sound"),
+                                Component.translatable("mrmx_dream.module.arrow_hit.config.sound"),
                                 (button, value) -> ArrowHitConfig.SOUND.set(value)));
 
 
@@ -103,7 +105,7 @@ public class ArrowHitConfigScreen extends Screen {
 
 
         y += Menu_Spacing; this.addRenderableWidget(Checkbox.builder(
-                        Component.translatable("mrmx_dream.config.arrow_block_hit.enabled"), this.font)
+                        Component.translatable("mrmx_dream.module.arrow_hit.config.block_hit"), this.font)
                 .pos(X_ScreenCenter - 30, y).selected(ArrowHitConfig.SHAME_ENABLED.get())
                 .onValueChange((checkbox, value) -> ArrowHitConfig.SHAME_ENABLED.set(value)).build());
         y += Menu_Spacing; this.addRenderableWidget(Button.builder(

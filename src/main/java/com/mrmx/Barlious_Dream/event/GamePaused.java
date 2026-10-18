@@ -1,6 +1,7 @@
 package com.mrmx.Barlious_Dream.event;
 
 import com.mrmx.Barlious_Dream.config.GamePauseConfig;
+import com.mrmx.Barlious_Dream.config.ModulesEnabler;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.PauseScreen;
 import net.neoforged.api.distmarker.Dist;
@@ -18,7 +19,7 @@ public class GamePaused {
 
     @SubscribeEvent
     public static void ScreenOpening(ScreenEvent.Opening event) {
-        if (!GamePauseConfig.ENABLED.get()) { return; }
+        if (!ModulesEnabler.GAME_PAUSE_ENABLED.get()) { return; }
         if (event.getScreen() instanceof PauseScreen && !InPauseMenu) {
             DelayAccount = DelayStart; InPauseMenu = true;
         }
@@ -26,7 +27,7 @@ public class GamePaused {
 
     @SubscribeEvent
     public static void onClientTick(ClientTickEvent.Post event) {
-        if (!GamePauseConfig.ENABLED.get()) { return; }
+        if (!ModulesEnabler.GAME_PAUSE_ENABLED.get()) { return; }
         if (Minecraft.getInstance().screen == null) {
             InPauseMenu = false;
             DelayAccount = -1;

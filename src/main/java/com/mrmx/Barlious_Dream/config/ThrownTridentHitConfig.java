@@ -28,7 +28,6 @@ public class ThrownTridentHitConfig {
 
     public static final ModConfigSpec SPEC;
 
-    public static final ModConfigSpec.BooleanValue ENABLED;
     public static final ModConfigSpec.BooleanValue PLAYER_ENABLED;
     public static final ModConfigSpec.BooleanValue ENEMY_ENABLED;
     public static final ModConfigSpec.BooleanValue NEUTRAL_ENABLED;
@@ -43,9 +42,6 @@ public class ThrownTridentHitConfig {
         ModConfigSpec.Builder builder = new ModConfigSpec.Builder();
         builder.push("thrown_trident_hit");
 
-        ENABLED = builder
-                .comment("Turn On, or Off the Trident-Hit Module")
-                .translation("enabled.thrown_trident_hit").define("enabled", false);
         PLAYER_ENABLED = builder
                 .comment("Turn On, or Off the Trident-Hit when you defeat a Player (PvP)")
                 .translation("player.thrown_trident_hit").define("player_enabled", true);

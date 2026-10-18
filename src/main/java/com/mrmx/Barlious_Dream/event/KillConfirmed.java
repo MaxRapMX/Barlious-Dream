@@ -1,6 +1,7 @@
 package com.mrmx.Barlious_Dream.event;
 
 import com.mrmx.Barlious_Dream.config.KillConfirmConfig;
+import com.mrmx.Barlious_Dream.config.ModulesEnabler;
 import com.mrmx.Barlious_Dream.registry.Barlious_Dream;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundSource;
@@ -17,7 +18,7 @@ public class KillConfirmed {
 
     @SubscribeEvent
     public static void PlayerKillConfirm(LivingDeathEvent event) {
-        if (!KillConfirmConfig.ENABLED.get()) { return; }
+        if (!ModulesEnabler.KILL_CONFIRM_ENABLED.get()) { return; }
 
         Entity KillSource = event.getSource().getEntity();
         if (!(KillSource instanceof ServerPlayer player)) { return; }

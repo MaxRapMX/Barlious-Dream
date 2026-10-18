@@ -9,7 +9,7 @@ import org.slf4j.Logger;
 
 @Mod(Barlious_Dream.MODID)
 public class Barlious_Dream {
-    public static final String MODID = "mrmx_dream"; // Define mod id in a common place for everything to reference
+    public static final String MODID = "mrmx_dream_client_side"; // Define mod id in a common place for everything to reference
     public static final Logger LOGGER = LogUtils.getLogger(); // Directly reference a slf4j logger
 
     public Barlious_Dream(IEventBus modEventBus) {

@@ -1,7 +1,9 @@
 package com.mrmx.Barlious_Dream.config;
 
 import com.mrmx.Barlious_Dream.sound.ClientModulesSounds;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
 import net.neoforged.neoforge.common.ModConfigSpec;
 import net.neoforged.neoforge.registries.DeferredHolder;
 
@@ -9,7 +11,7 @@ public class ThrownTridentHitConfig {
 
     public enum ThrownTridentHitSoundOption {
         MC_Ding(ClientModulesSounds.MC_DING),
-        MC_Bell(ClientModulesSounds.MC_BELL),
+        MC_Bell(DeferredHolder.create(Registries.SOUND_EVENT, SoundEvents.BELL_BLOCK.getLocation())),
         Bonk(ClientModulesSounds.MEME_BONK),
         Metal_Pipe(ClientModulesSounds.METAL_PIPE),
         CUSTOMIZABLE_1(ClientModulesSounds.CUSTOM_PVP_1),

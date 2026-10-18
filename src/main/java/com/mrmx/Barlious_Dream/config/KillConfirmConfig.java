@@ -2,6 +2,9 @@ package com.mrmx.Barlious_Dream.config;
 
 import com.mrmx.Barlious_Dream.sound.ClientModulesSounds;
 import com.mrmx.Barlious_Dream.sound.ModSounds;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.sounds.SoundEvents;
 import net.neoforged.neoforge.common.ModConfigSpec;
 import net.minecraft.sounds.SoundEvent;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -9,7 +12,7 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 public class KillConfirmConfig {
 
     public enum KillConfirmSoundOption {
-        MC_Bell(ClientModulesSounds.MC_BELL),
+        MC_Bell(DeferredHolder.create(Registries.SOUND_EVENT, SoundEvents.BELL_BLOCK.getLocation())),
         MC_Channeling(ClientModulesSounds.MC_CHANNELING),
         Breath(ClientModulesSounds.BREATH_1),
         MK_Fatality(ClientModulesSounds.MK_FATALITY),

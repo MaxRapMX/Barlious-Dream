@@ -1,9 +1,5 @@
 {
-  "mc_click": { "subtitle": "mrmx_dream.subtitle.mc_click",
-    "sounds": [
-      { "name": "mrmx_dream:mc_click", "stream": false }
-    ]
-  }, "spongebob_disappointed": { "subtitle": "mrmx_dream.subtitle.disappointed",
+  "spongebob_disappointed": { "subtitle": "mrmx_dream.subtitle.disappointed",
   "sounds": [
     {
       "name": "mrmx_dream:spongebob_disappointed", "stream": false
@@ -13,13 +9,7 @@
 
 
 
-  "mc_bell": { "subtitle": "mrmx_dream.subtitle.mc_bell",
-    "sounds": [
-      {
-        "name": "mrmx_dream:mc_bell", "stream": false
-      }
-    ]
-  }, "mc_ding": { "subtitle": "mrmx_dream.subtitle.mc_ding",
+  "mc_ding": { "subtitle": "mrmx_dream.subtitle.mc_ding",
   "sounds": [
     {
       "name": "mrmx_dream:mc_ding", "stream": false

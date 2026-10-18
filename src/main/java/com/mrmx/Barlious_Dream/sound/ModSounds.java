@@ -10,11 +10,6 @@ public class ModSounds {
     public static final DeferredRegister<SoundEvent> SOUND =
             DeferredRegister.create(BuiltInRegistries.SOUND_EVENT, "mrmx_dream");
 
-    public static final DeferredHolder<SoundEvent, SoundEvent> MC_CLICK =
-            SOUND.register("mc_click", () -> SoundEvent.createVariableRangeEvent(
-                    ResourceLocation.fromNamespaceAndPath("mrmx_dream","mc_click")
-                    )
-            );
     public static final DeferredHolder<SoundEvent, SoundEvent> SPONGEBOB_DISAPPOINTED =
             SOUND.register("spongebob_disappointed", () -> SoundEvent.createVariableRangeEvent(
                             ResourceLocation.fromNamespaceAndPath("mrmx_dream", "spongebob_disappointed")

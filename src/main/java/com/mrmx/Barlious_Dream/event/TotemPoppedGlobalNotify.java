@@ -10,7 +10,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.living.LivingUseTotemEvent;
 
-@EventBusSubscriber(modid = Barlious_Dream.MODID)
+@EventBusSubscriber(modid = Barlious_Dream.MODID, bus = EventBusSubscriber.Bus.GAME)
 public class TotemPoppedGlobalNotify {
     @SubscribeEvent
     public static void onTotemUse(LivingUseTotemEvent event) {

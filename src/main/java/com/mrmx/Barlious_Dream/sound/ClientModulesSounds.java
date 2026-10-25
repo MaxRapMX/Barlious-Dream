@@ -12,11 +12,6 @@ public class ClientModulesSounds {
     public static final DeferredRegister<SoundEvent> GAME_PAUSE =
             DeferredRegister.create(BuiltInRegistries.SOUND_EVENT, "mrmx_dream");
 
-    public static final DeferredHolder<SoundEvent, SoundEvent> MC_BELL =
-            PVP_SOUND.register("mc_bell", () -> SoundEvent.createVariableRangeEvent(
-                            ResourceLocation.fromNamespaceAndPath("mrmx_dream","mc_bell")
-                    )
-            );
     public static final DeferredHolder<SoundEvent, SoundEvent> MC_DING =
             PVP_SOUND.register("mc_ding", () -> SoundEvent.createVariableRangeEvent(
                             ResourceLocation.fromNamespaceAndPath("mrmx_dream","mc_ding")

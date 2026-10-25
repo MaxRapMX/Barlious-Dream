@@ -1,15 +1,16 @@
 package com.mrmx.Barlious_Dream.config;
 
 import com.mrmx.Barlious_Dream.sound.ClientModulesSounds;
-import com.mrmx.Barlious_Dream.sound.ModSounds;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
 import net.neoforged.neoforge.common.ModConfigSpec;
 import net.neoforged.neoforge.registries.DeferredHolder;
 
 public class GamePauseConfig {
 
     public enum GamePauseSoundOption {
-        MC_Click(ModSounds.MC_CLICK),
+        MC_Click(DeferredHolder.create(Registries.SOUND_EVENT, SoundEvents.UI_BUTTON_CLICK.key().location())),
         PVZ(ClientModulesSounds.PVZ_PAUSE),
         SKULLGIRLS(ClientModulesSounds.SKULLGIRLS_JUSTAMOMENT),
         CUSTOMIZABLE_1(ClientModulesSounds.CUSTOM_PAUSE_1),

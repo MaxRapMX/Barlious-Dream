@@ -85,6 +85,16 @@
 
   "tooltip.cnc_sa.mrmx_dream.the_secret_milkshake": "A traditional Milkshake recipe of \"Doña Lucha\", its very nutritive, but is delicious?...",
 
+  "tooltip.mrmx_dream.keybinds.shift": "Shift ",
+  "tooltip.mrmx_dream.keybinds.shift.description": "for more info",
+  "tooltip.mrmx_dream.keybinds.left-click": "Left-Click ",
+  "tooltip.mrmx_dream.keybinds.right-click": "Right-Click ",
+  "tooltip.mrmx_dream.keybinds.shift_right-click": "Shift + Right-Click ",
+  "tooltip.mrmx_dream.keybinds.custom": "\"%s\" ",
+
+  "key.categories.mrmx_dream": "Barlious Dream Additions",
+  "key.mrmx_dream.open_ender_bag_on_belt": "Open Ender Bag on belt (using Curios)",
+
   "mrmx_dream.subtitle.mc_click": "Click",
   "mrmx_dream.subtitle.disappointed": "Dissapointed",
   "mrmx_dream.subtitle.mc_bell": "Bell lost rings",
@@ -99,16 +109,6 @@
   "mrmx_dream.subtitle.custom_pvp_sound": "Custom Hit/Kill Sound",
   "mrmx_dream.subtitle.game_paused": "Game paused",
   "mrmx_dream.subtitle.custom_game_paused": "Custom Pause Sound",
-
-  "tooltip.mrmx_dream.keybinds.shift": "Shift ",
-  "tooltip.mrmx_dream.keybinds.shift.description": "for more info",
-  "tooltip.mrmx_dream.keybinds.left-click": "Left-Click ",
-  "tooltip.mrmx_dream.keybinds.right-click": "Right-Click ",
-  "tooltip.mrmx_dream.keybinds.shift_right-click": "Shift + Right-Click ",
-  "tooltip.mrmx_dream.keybinds.custom": "\"%s\" ",
-
-  "key.categories.mrmx_dream": "Barlious Dream Additions",
-  "key.mrmx_dream.open_ender_bag_on_belt": "Open Ender Bag on belt (using Curios)",
 
   "mrmx_dream.config.title": "Barliou´s Dream Configuration",
   "mrmx_dream.config.sound.volume": "Volume",

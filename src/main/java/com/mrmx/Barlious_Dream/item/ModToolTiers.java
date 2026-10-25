@@ -1,7 +1,9 @@
 package com.mrmx.Barlious_Dream.item;
 
+import com.blackgear.vanillabackport.common.registries.items.ModToolMaterials;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.Tiers;
+import net.neoforged.fml.ModList;
 import net.neoforged.neoforge.common.SimpleTier;
 
 public class ModToolTiers {
@@ -37,5 +39,15 @@ public class ModToolTiers {
     }
     public static final Tier NETHERITE_MACHETE = NETHERITE_CUSTOM(2640, 7.2f, 17);
     public static final Tier NETHERITE_HEAVY_PICKAXE = NETHERITE_CUSTOM(4265, 5.8f, 13);
+
+    private static Tier UNDYING_TOOLS(int uses, float speed, int enchantmentvalue) {
+        return new SimpleTier( Tiers.DIAMOND.getIncorrectBlocksForDrops(),
+                uses, speed,
+                Tiers.DIAMOND.getAttackDamageBonus(),
+                enchantmentvalue, () -> Tiers.GOLD.getRepairIngredient()
+        );
+    }
+    public static final Tier MACHETE_OF_UNDYING = UNDYING_TOOLS(1567, 6.7f, 22);
+      //public static final Tier NETHERITE_HEAVY_PICKAXE = NETHERITE_CUSTOM(4265, 5.8f, 13);
 
 }

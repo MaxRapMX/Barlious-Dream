@@ -1,0 +1,21 @@
+{
+  "neoforge:conditions": [
+    { "type": "neoforge:mod_loaded", "modid": "corn_delight" }
+  ], "type": "farmersdelight:cooking",
+  "cookingtime": 80, "experience": 3.50,
+  "ingredients": [
+    { "tag": "c:buckets/milk" },
+    { "tag": "c:buckets/milk" },
+    { "item": "minecraft:water_bucket" },
+    { "item": "corn_delight:corn_seeds" },
+    { "item": "minecraft:glow_berries" },
+    { "item": "minecraft:glow_berries" }
+  ],
+  "result": {
+    "count": 1,
+    "id": "mrmx_dream:glow_berries_atole"
+  },
+  "container": {
+    "id": "mrmx_dream:artisanal_cup"
+  }
+}

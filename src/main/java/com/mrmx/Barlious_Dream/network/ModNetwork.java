@@ -17,5 +17,11 @@ public class ModNetwork {
                 EnderBagPacketPayload.STREAM_CODEC,
                 EnderBagPacketPayload::handle
         );
+
+        registrar.playToClient(
+                TotemAnimationPacket.TYPE,
+                TotemAnimationPacket.STREAM_CODEC,
+                TotemAnimationPacket::handleOnClient
+        );
     }
 }

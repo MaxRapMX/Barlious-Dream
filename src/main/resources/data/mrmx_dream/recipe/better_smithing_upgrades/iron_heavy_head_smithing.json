@@ -1,0 +1,18 @@
+{
+  "neoforge:conditions": [
+    { "type": "neoforge:mod_loaded", "modid": "better_smithing_upgrades" }
+  ], "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "better_smithing_upgrades:iron_upgrade_part"
+  },
+  "base": {
+    "tag": "better_smithing_upgrades:upgradable/iron_heavy_head"
+  },
+  "result": {
+    "count": 1,
+    "id": "mrmx_dream:iron_heavy_head"
+  },
+  "template": {
+    "item": "better_smithing_upgrades:basic_upgrade_smithing_template"
+  }
+}

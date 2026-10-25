@@ -1,6 +1,4 @@
 {
   "replace": false,
-  "values": [
-    { "id": "#mrmx_dream:atoles",
-    "required": false } ]
+  "values": [ "#mrmx_dream:general_tags/barlious_dream_foods" ]
 }

@@ -1,0 +1,51 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_brick": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:brick"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }, "has_atole": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#mrmx_dream:atoles"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }, "has_excellent_atole": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#mrmx_dream:excellent_atoles"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "mrmx_dream:artisanal_cup"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_brick",
+      "has_atole", "has_excellent_atole"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "mrmx_dream:artisanal_cup"
+    ]
+  }
+}

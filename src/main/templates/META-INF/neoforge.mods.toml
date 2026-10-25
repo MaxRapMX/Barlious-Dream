@@ -95,6 +95,14 @@ ordering="AFTER"
 side="BOTH"
 
 [[dependencies.mrmx_dream]]
+modId="cnc_sa"
+type="optional"
+reason="Add a New Secret Item"
+versionRange="[0.1.0,)"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.mrmx_dream]]
 modId="better_smithing_upgrades"
 type="optional"
 reason="Adds new recipes"
@@ -107,6 +115,14 @@ modId="corn_delight"
 type="optional"
 reason="Adds atole"
 versionRange="[1.0.0-1.21,)"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.mrmx_dream]]
+modId="vanillabackport"
+type="optional"
+reason="Adds atole"
+versionRange="[1.2,)"
 ordering="AFTER"
 side="BOTH"
 

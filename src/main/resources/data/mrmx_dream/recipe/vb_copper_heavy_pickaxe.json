@@ -1,0 +1,26 @@
+{
+  "neoforge:conditions": [
+    { "type": "neoforge:mod_loaded", "modid": "vanillabackport" }
+  ], "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:copper_pickaxe"
+    },
+    "X": {
+      "tag": "c:ingots/copper"
+    },
+    "B": {
+      "tag": "c:nuggets/copper"
+    }
+  },
+  "pattern": [
+    "BXX",
+    " #X",
+    "  B"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mrmx_dream:vb_copper_heavy_pickaxe"
+  }
+}

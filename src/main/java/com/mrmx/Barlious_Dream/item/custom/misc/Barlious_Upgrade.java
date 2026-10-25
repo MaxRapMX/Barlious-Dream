@@ -25,6 +25,8 @@ public class Barlious_Upgrade extends SmithingTemplateItem {
     private static final ResourceLocation EMPTY_SLOT_SUN = ResourceLocation.fromNamespaceAndPath("mrmx_dream", "item/empty_slot_sun");
     private static final ResourceLocation EMPTY_SLOT_CHARCOAL = ResourceLocation.fromNamespaceAndPath("mrmx_dream", "item/empty_slot_charcoal");
     private static final ResourceLocation EMPTY_SLOT_SNOWBALL = ResourceLocation.fromNamespaceAndPath("mrmx_dream", "item/empty_slot_snowball");
+    private static final ResourceLocation EMPTY_SLOT_CRYING_CHORUS_FRUIT = ResourceLocation.fromNamespaceAndPath("mrmx_dream", "item/empty_slot_chorus_fruit");
+    private static final ResourceLocation EMPTY_SLOT_TOTEM_OF_UNDYING = ResourceLocation.fromNamespaceAndPath("mrmx_dream", "item/empty_slot_totem_of_undying");
 
     public Barlious_Upgrade(Item.Properties properties) {
         super(
@@ -43,12 +45,14 @@ public class Barlious_Upgrade extends SmithingTemplateItem {
         icons.add(EMPTY_SLOT_SWORD);
         icons.add(EMPTY_SLOT_PICKAXE);
         icons.add(EMPTY_SLOT_MACHETE);
+        icons.add(EMPTY_SLOT_BLOCK);
         if (ModList.get().isLoaded("cnc")) {
             icons.add(EMPTY_SLOT_PLANT_FOOD);
             if (ModList.get().isLoaded("corn_delight")) {
                 icons.add(EMPTY_SLOT_GLASS_CUP);
                 icons.add(EMPTY_SLOT_ARTISANAL_CUP);
-            } } return icons;
+            }
+        } return icons;
     }
 
     private static List<ResourceLocation> IngredientIcons() {
@@ -56,12 +60,14 @@ public class Barlious_Upgrade extends SmithingTemplateItem {
         icons.add(EMPTY_SLOT_BLOCK);
         icons.add(EMPTY_SLOT_HEAVY_HEAD);
         icons.add(EMPTY_SLOT_ROTTEN_FLESH);
+        icons.add(EMPTY_SLOT_CRYING_CHORUS_FRUIT);
         if (ModList.get().isLoaded("cnc")) {
             icons.add(EMPTY_SLOT_SUN);
             if (ModList.get().isLoaded("corn_delight")) {
                 icons.add(EMPTY_SLOT_CHARCOAL);
                 icons.add(EMPTY_SLOT_SNOWBALL);
-            } } return icons;
+            }
+        } return icons;
     }
 
     @Override

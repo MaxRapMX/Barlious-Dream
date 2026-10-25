@@ -4,7 +4,7 @@
       "type": "neoforge:mod_loaded", "modid": "corn_delight"
     }
   ], "type": "farmersdelight:cooking",
-  "cookingtime": 140, "experience": 1.50,
+  "cookingtime": 100, "experience": 3.50,
   "ingredients": [
     { "tag": "c:buckets/milk" },
     { "tag": "c:buckets/milk" },

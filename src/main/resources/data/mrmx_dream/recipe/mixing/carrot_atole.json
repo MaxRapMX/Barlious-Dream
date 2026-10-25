@@ -1,0 +1,28 @@
+{
+  "neoforge:conditions": [
+    { "type": "neoforge:mod_loaded", "modid": "create" },
+    { "type": "neoforge:mod_loaded", "modid": "corn_delight" }
+  ], "type": "create:mixing",
+  "heat_requirement": "heated",
+  "ingredients": [
+    { "item": "mrmx_dream:artisanal_cup" },
+    { "item": "corn_delight:corn_seeds" },
+    { "item": "minecraft:carrot" },
+    { "item": "minecraft:carrot" },
+    {
+      "type": "neoforge:single",
+      "fluid": "minecraft:water",
+      "amount": 500
+    }, {
+      "type": "neoforge:tag",
+      "amount": 1000,
+      "tag": "c:milk"
+    }
+  ],
+  "results": [
+    {
+      "id": "mrmx_dream:carrot_atole",
+      "count": 1
+    }
+  ]
+}

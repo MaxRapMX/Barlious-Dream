@@ -125,8 +125,10 @@ repositories {
 
 dependencies {
     compileOnly "maven.modrinth:crops-n-corpses:0.1.0"
+    compileOnly "maven.modrinth:crops-n-corpses-survival-additions:1.0.0"
     compileOnly "maven.modrinth:farmers-delight:1.21.1-1.3.2"
     compileOnly "top.theillusivec4.curios:curios-neoforge:9.5.1+1.21.1:api"
+    compileOnly "maven.modrinth:vanillabackport:1.2"
 
     // Example optional mod dependency with JEI
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime

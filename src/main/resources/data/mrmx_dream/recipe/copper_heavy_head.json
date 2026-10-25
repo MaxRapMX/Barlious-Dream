@@ -1,0 +1,23 @@
+{
+  "neoforge:conditions": [
+    { "type": "neoforge:mod_loaded", "modid": "vanillabackport" }
+  ], "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "X": {
+      "tag": "c:ingots/copper"
+    },
+    "B": {
+      "tag": "c:nuggets/copper"
+    }
+  },
+  "pattern": [
+    "BXX",
+    "  X",
+    "  B"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mrmx_dream:copper_heavy_head"
+  }
+}

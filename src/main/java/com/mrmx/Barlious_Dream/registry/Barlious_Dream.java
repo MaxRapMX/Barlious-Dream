@@ -6,7 +6,9 @@ import com.mrmx.Barlious_Dream.item.ModItems;
 import com.mrmx.Barlious_Dream.sound.ClientModulesSounds;
 import com.mrmx.Barlious_Dream.sound.ModSounds;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.fml.ModList;
 import net.neoforged.fml.common.Mod;
+import org.apache.maven.artifact.versioning.VersionRange;
 import org.slf4j.Logger;
 
 @Mod(Barlious_Dream.MODID)
@@ -22,5 +24,16 @@ public class Barlious_Dream {
 
         ClientModulesSounds.PVP_SOUND.register(modEventBus);
         ClientModulesSounds.GAME_PAUSE.register(modEventBus);
+    }
+
+    public static boolean isModInVersionRange(String modId, String versionRangeSpec) {
+        return ModList.get().getModContainerById(modId).map(container -> {
+            try {
+                VersionRange range = VersionRange.createFromVersionSpec(versionRangeSpec);
+                return range.containsVersion(container.getModInfo().getVersion());
+            } catch (Exception e) {
+                return false;
+            }
+        }).orElse(false);
     }
 }

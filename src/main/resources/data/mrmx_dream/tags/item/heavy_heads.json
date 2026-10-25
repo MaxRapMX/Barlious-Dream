@@ -2,6 +2,7 @@
   "values": [
     "mrmx_dream:iron_heavy_head",
     "mrmx_dream:diamond_heavy_head",
-    "mrmx_dream:netherite_heavy_head"
+    "mrmx_dream:netherite_heavy_head",
+    { "id": "mrmx_dream:copper_heavy_head", "required": false }
   ]
 }

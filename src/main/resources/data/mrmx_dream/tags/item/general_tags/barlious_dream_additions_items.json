@@ -1,0 +1,21 @@
+{
+  "values": [
+    { "id": "mrmx_dream:plant_whistle", "required": false },
+    { "id": "mrmx_dream:vb_copper_machete", "required": false },
+    { "id": "mrmx_dream:copper_heavy_head", "required": false },
+    { "id": "mrmx_dream:vb_copper_heavy_pickaxe", "required": false },
+    { "id": "mrmx_dream:artisanal_cup", "required": false },
+    { "id": "mrmx_dream:vanilla_atole", "required": false },
+    { "id": "mrmx_dream:chocolate_atole", "required": false },
+    { "id": "mrmx_dream:cherry_atole", "required": false },
+    { "id": "mrmx_dream:apple_atole", "required": false },
+    { "id": "mrmx_dream:carrot_atole", "required": false },
+    { "id": "mrmx_dream:glow_berries_atole", "required": false },
+    { "id": "mrmx_dream:chorus_fruit_atole", "required": false },
+    { "id": "mrmx_dream:walnut_atole", "required": false },
+    { "id": "mrmx_dream:mazapan_atole", "required": false },
+    { "id": "mrmx_dream:angels_kiss_atole", "required": false },
+    { "id": "mrmx_dream:rice_puding_atole", "required": false },
+    { "id": "mrmx_dream:champurrado", "required": false }
+  ]
+}

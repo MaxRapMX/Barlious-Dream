@@ -1,8 +1,9 @@
 {
   "replace": false,
-  "values": [
-    { "id": "mrmx_dream:artisanal_cup",
-      "required": false },
-    { "id": "#mrmx_dream:atoles",
-    "required": false } ]
+  "values": [ "mrmx_dream:icon", "mrmx_dream:ender_bag",
+    { "id": "#minecraft:bundles", "required": false },
+    { "id": "mrmx_dream:artisanal_cup", "required": false },
+    { "id": "#mrmx_dream:atoles", "required": false },
+    { "id": "#mrmx_dream:excellent_atoles", "required": false }
+  ]
 }

@@ -1,0 +1,7 @@
+{
+  "values": [
+    "mrmx_dream:crying_chorus_fruit",
+    { "id": "#mrmx_dream:atoles", "required": false },
+    { "id": "#mrmx_dream:excellent_atoles", "required": false }
+  ]
+}

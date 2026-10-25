@@ -1,0 +1,8 @@
+{
+  "values": [
+    "mrmx_dream:glow_berries_atole", "mrmx_dream:chorus_fruit_atole",
+    { "id": "mrmx_dream:mazapan_atole", "required": false },
+    { "id": "mrmx_dream:angels_kiss_atole", "required": false },
+    { "id": "mrmx_dream:champurrado", "required": false }
+  ]
+}

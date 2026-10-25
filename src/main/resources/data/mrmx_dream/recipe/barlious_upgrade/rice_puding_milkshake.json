@@ -1,0 +1,19 @@
+{
+  "neoforge:conditions": [
+    { "type": "neoforge:mod_loaded", "modid": "cnc_sa" },
+    { "type": "neoforge:mod_loaded", "modid": "corn_delight" }
+  ], "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:snowball"
+  },
+  "base": {
+    "item": "mrmx_dream:rice_puding_atole"
+  },
+  "result": {
+    "count": 1,
+    "id": "cnc_sa:rice_puding_milkshake"
+  },
+  "template": {
+    "item": "mrmx_dream:barlious_upgrade_smithing_template"
+  }
+}

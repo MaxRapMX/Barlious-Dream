@@ -1,0 +1,19 @@
+{
+  "neoforge:conditions": [
+    { "type": "neoforge:mod_loaded", "modid": "cnc_sa" },
+    { "type": "neoforge:mod_loaded", "modid": "corn_delight" }
+  ], "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:charcoal"
+  },
+  "base": {
+    "item": "cnc_sa:angels_kiss_milkshake"
+  },
+  "result": {
+    "count": 1,
+    "id": "mrmx_dream:angels_kiss_atole"
+  },
+  "template": {
+    "item": "mrmx_dream:barlious_upgrade_smithing_template"
+  }
+}

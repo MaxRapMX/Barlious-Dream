@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [ "minecraft:vine",
+    { "id": "minecraft:bush", "required": false },
+    { "id": "biomesoplenty:bush", "required": false },
+    { "id": "nirvana:wild_hemp", "required": false },
+    { "id": "create:experience_nugget", "required": false }
+  ]
+}

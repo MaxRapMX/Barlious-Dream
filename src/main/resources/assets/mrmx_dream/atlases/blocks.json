@@ -19,6 +19,10 @@
     { "type": "single",
       "resource": "mrmx_dream:item/empty_slot_artisanal_cup" },
     { "type": "single",
-      "resource": "mrmx_dream:item/empty_slot_snowball" }
+      "resource": "mrmx_dream:item/empty_slot_snowball" },
+    { "type": "single",
+      "resource": "mrmx_dream:item/empty_slot_chorus_fruit" },
+    { "type": "single",
+      "resource": "mrmx_dream:item/empty_slot_totem_of_undying" }
   ]
 }

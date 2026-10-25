@@ -1,0 +1,30 @@
+{
+  "neoforge:conditions": [
+    { "type": "neoforge:mod_loaded", "modid": "create"},
+    { "type": "neoforge:item_exists", "item": "cnc_sa:papa_antonio_milkshake" }
+  ],
+  "type": "create:mechanical_crafting",
+  "accept_mirrored": true, "category": "food",
+  "key": {
+    "A": { "item": "cnc_sa:glass_cup" },
+    "B": { "item": "minecraft:sweet_berries" },
+    "C": { "item": "minecraft:milk_bucket" },
+    "D": { "item": "minecraft:powder_snow_bucket" },
+    "E": { "tag": "c:eggs" },
+    "F": { "tag": "c:foods/safe_raw_fish" },
+    "G": { "tag": "mrmx_dream:apio_sustitute" },
+    "H": { "tag": "mrmx_dream:perejil_sustitute" },
+    "I": { "tag": "mrmx_dream:cilantro_sustitute" },
+    "J": { "tag": "mrmx_dream:papa_antonio_complement" }
+  },
+  "pattern": [
+    "  B  ",
+    "HGIGH",
+    "JEFEJ",
+    "GDCDG",
+    " HAH "
+  ],
+  "result": {
+    "count": 1, "id": "cnc_sa:papa_antonio_milkshake"
+  }, "show_notification": true
+}

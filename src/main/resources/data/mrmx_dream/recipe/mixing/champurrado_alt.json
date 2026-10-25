@@ -1,11 +1,7 @@
 {
   "neoforge:conditions": [
-    {
-      "type": "neoforge:mod_loaded",
-      "modid": "create"
-    }, {
-      "type": "neoforge:mod_loaded", "modid": "corn_delight"
-    }
+    { "type": "neoforge:mod_loaded", "modid": "create" },
+    { "type": "neoforge:mod_loaded", "modid": "corn_delight" }
   ], "type": "create:mixing",
   "heat_requirement": "heated",
   "ingredients": [
@@ -15,12 +11,12 @@
     { "item": "minecraft:sugar" },
     {
       "type": "neoforge:single",
-      "amount": 1000,
-      "fluid": "create:chocolate"
-    }, {
-      "type": "neoforge:single",
       "fluid": "minecraft:water",
       "amount": 500
+    }, {
+      "type": "neoforge:single",
+      "amount": 1000,
+      "tag": "create:chocolate"
     }
   ],
   "results": [

@@ -1,10 +1,9 @@
 {
   "values": [
-    "mrmx_dream:vanilla_atole",
-    "mrmx_dream:chocolate_atole",
-    "mrmx_dream:rice_puding_atole",
-    "mrmx_dream:champurrado",
-    { "id": "mrmx_dream:cherry_atole",
-      "required": false }
+    "mrmx_dream:vanilla_atole", "mrmx_dream:chocolate_atole",
+    { "id": "mrmx_dream:cherry_atole", "required": false },
+    "mrmx_dream:apple_atole", "mrmx_dream:carrot_atole",
+    { "id": "mrmx_dream:walnut_atole", "required": false },
+    "mrmx_dream:rice_puding_atole"
   ]
 }

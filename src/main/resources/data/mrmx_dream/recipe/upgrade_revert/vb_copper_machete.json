@@ -1,0 +1,18 @@
+{
+  "neoforge:conditions": [
+    { "type": "neoforge:mod_loaded", "modid": "vanillabackport" }
+  ], "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:rotten_flesh"
+  },
+  "base": {
+    "item": "mrmx_dream:vb_copper_machete"
+  },
+  "result": {
+    "count": 1,
+    "id": "minecraft:copper_sword"
+  },
+  "template": {
+    "item": "mrmx_dream:barlious_upgrade_smithing_template"
+  }
+}

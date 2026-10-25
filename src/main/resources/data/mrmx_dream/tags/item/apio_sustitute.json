@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [ "minecraft:fern",
+    { "id": "minecraft:large_fern", "required": false },
+    { "id": "biomesoplenty:bramble_leaves", "required": false },
+    { "id": "cnc:plant_food", "required": false }
+  ]
+}

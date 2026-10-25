@@ -1,0 +1,22 @@
+{
+  "neoforge:conditions": [
+    { "type": "neoforge:mod_loaded", "modid": "corn_delight" },
+    { "type": "neoforge:mod_loaded", "modid": "cnc" }
+  ], "type": "farmersdelight:cooking",
+  "cookingtime": 240, "experience": 1.50,
+  "ingredients": [
+    { "tag": "c:buckets/milk" },
+    { "tag": "c:buckets/milk" },
+    { "item": "minecraft:water_bucket" },
+    { "item": "corn_delight:corn_seeds" },
+    { "item": "cnc:walnut" },
+    { "item": "cnc:walnut" }
+  ],
+  "result": {
+    "count": 1,
+    "id": "mrmx_dream:walnut_atole"
+  },
+  "container": {
+    "id": "mrmx_dream:artisanal_cup"
+  }
+}

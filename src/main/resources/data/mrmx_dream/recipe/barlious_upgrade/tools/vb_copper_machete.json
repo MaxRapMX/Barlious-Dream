@@ -1,6 +1,6 @@
 {
   "neoforge:conditions": [
-    { "type": "neoforge:mod_loaded", "modid": "vanillabackport" }
+    { "type": "neoforge:item_exists", "item": "mrmx_dream:vb_copper_machete" }
   ], "type": "minecraft:smithing_transform",
   "addition": {
     "tag": "minecraft:logs_that_burn"

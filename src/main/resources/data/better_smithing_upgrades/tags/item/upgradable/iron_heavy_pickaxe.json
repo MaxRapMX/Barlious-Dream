@@ -1,5 +1,5 @@
 {
   "values": [
-    { "id": "mrmx_dream:vb_copper_heavy_pickaxe", "required": false }
+    { "id": "#mrmx_dream:variants/copper_heavy_pickaxes", "required": false }
   ]
 }

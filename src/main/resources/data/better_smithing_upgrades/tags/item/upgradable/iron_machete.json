@@ -1,5 +1,5 @@
 {
   "values": [
-    { "id": "mrmx_dream:vb_copper_machete", "required": false }
+    { "id": "#mrmx_dream:variants/copper_machetes", "required": false }
   ]
 }

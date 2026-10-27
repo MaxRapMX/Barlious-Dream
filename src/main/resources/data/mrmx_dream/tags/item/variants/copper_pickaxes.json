@@ -1,0 +1,6 @@
+{
+  "values": [
+    "minecraft:copper_pickaxe",
+    { "id": "create_ironworks:copper_pickaxe", "required": false }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    { "id": "minecraft:wooden_spear", "required": false },
+    { "id": "minecraft:stone_spear", "required": false },
+    { "id": "minecraft:copper_spear", "required": false }
+  ]
+}

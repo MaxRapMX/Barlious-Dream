@@ -1,0 +1,6 @@
+{
+  "replace": false,
+  "values": [
+    { "id": "minecraft:iron_nautilus_armor", "required": false }
+  ]
+}

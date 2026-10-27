@@ -1,6 +1,6 @@
 {
   "neoforge:conditions": [
-    { "type": "neoforge:mod_loaded", "modid": "vanillabackport" }
+    { "type": "neoforge:item_exists", "item": "mrmx_dream:copper_heavy_head" }
   ], "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {

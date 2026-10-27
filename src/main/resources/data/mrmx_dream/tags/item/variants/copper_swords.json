@@ -1,0 +1,6 @@
+{
+  "values": [
+    "minecraft:copper_sword",
+    { "id": "create_ironworks:copper_sword", "required": false }
+  ]
+}

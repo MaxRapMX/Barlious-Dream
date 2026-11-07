@@ -1,6 +1,5 @@
 package com.mrmx.Barlious_Dream.event;
 
-import com.mrmx.Barlious_Dream.config.ModulesEnabler;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;

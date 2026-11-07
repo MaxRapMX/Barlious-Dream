@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded", "modid": "corn_delight"
+    }
+  ], "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "mrmx_dream:tortilla_for_tlayuda_raw"
+  },
+  "result": {
+    "id": "mrmx_dream:tortilla_for_tlayuda",
+    "count": 1
+  },
+  "experience": 1.0,
+  "cookingtime": 300
+}

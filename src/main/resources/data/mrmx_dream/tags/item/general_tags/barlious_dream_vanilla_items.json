@@ -1,9 +1,13 @@
 {
   "values": [
     "mrmx_dream:icon", "mrmx_dream:barlious_upgrade_smithing_template", "mrmx_dream:crying_chorus_fruit",
-    "mrmx_dream:iron_machete", "mrmx_dream:diamond_machete", "mrmx_dream:netherite_machete",
-    "mrmx_dream:iron_heavy_head", "mrmx_dream:diamond_heavy_head", "mrmx_dream:netherite_heavy_head",
-    "mrmx_dream:iron_heavy_pickaxe", "mrmx_dream:diamond_heavy_pickaxe", "mrmx_dream:netherite_heavy_pickaxe",
-    "mrmx_dream:ender_bag"
+    "mrmx_dream:iron_machete", "mrmx_dream:golden_machete" ,"mrmx_dream:diamond_machete",
+    "mrmx_dream:machete_of_undying", "mrmx_dream:netherite_machete",
+    "mrmx_dream:iron_heavy_head", "mrmx_dream:golden_heavy_head", "mrmx_dream:diamond_heavy_head",
+    "mrmx_dream:netherite_heavy_head",
+    "mrmx_dream:iron_heavy_pickaxe", "mrmx_dream:golden_heavy_pickaxe", "mrmx_dream:diamond_heavy_pickaxe",
+    "mrmx_dream:netherite_heavy_pickaxe",
+    "mrmx_dream:ender_bag", "mrmx_dream:sword_of_undying",
+    "mrmx_dream:totem_of_the_deep", "mrmx_dream:totem_of_omnipresence"
   ]
 }

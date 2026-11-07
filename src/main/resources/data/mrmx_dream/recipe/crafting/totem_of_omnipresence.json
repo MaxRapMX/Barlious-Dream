@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "X": {
+      "tag": "mrmx_dream:basic_undying_items"
+    },
+    "B": {
+      "item": "minecraft:crying_obsidian"
+    },
+    "C": {
+      "tag": "mrmx_dream:barlious_essence_omg"
+    }
+  },
+  "pattern": [
+    "CXC",
+    "XBX",
+    "CXC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mrmx_dream:totem_of_omnipresence"
+  }
+}

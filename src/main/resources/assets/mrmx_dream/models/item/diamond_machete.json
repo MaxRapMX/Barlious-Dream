@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "mrmx_dream:item/diamond_machete"
+    "layer0": "mrmx_dream:item/tools/diamond_machete"
   }
 }

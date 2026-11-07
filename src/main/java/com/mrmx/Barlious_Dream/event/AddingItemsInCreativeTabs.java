@@ -14,6 +14,7 @@ import net.minecraft.world.level.ItemLike;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModList;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import uwu.llkc.cnc.common.init.ItemRegistry;
 import static com.mrmx.Barlious_Dream.registry.Barlious_Dream.isModInVersionRange;
@@ -31,6 +32,12 @@ public class AddingItemsInCreativeTabs {
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.insertAfter(
                     new ItemStack(Items.IRON_AXE), ModItems.IRON_MACHETE.get().getDefaultInstance(),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.insertAfter(
+                    new ItemStack(Items.GOLDEN_PICKAXE), ModItems.GOLDEN_HEAVY_PICKAXE.get().getDefaultInstance(),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.insertAfter(
+                    new ItemStack(Items.GOLDEN_AXE), ModItems.GOLDEN_MACHETE.get().getDefaultInstance(),
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.insertAfter(
                     new ItemStack(Items.DIAMOND_PICKAXE), ModItems.DIAMOND_HEAVY_PICKAXE.get().getDefaultInstance(),
@@ -64,10 +71,19 @@ public class AddingItemsInCreativeTabs {
                     new ItemStack(Items.NETHERITE_AXE), ModItems.IRON_MACHETE.get().getDefaultInstance(),
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.insertAfter(
-                    new ItemStack((ItemLike) ModItems.IRON_MACHETE), ModItems.DIAMOND_MACHETE.get().getDefaultInstance(),
+                    new ItemStack((ItemLike) ModItems.IRON_MACHETE), ModItems.GOLDEN_MACHETE.get().getDefaultInstance(),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.insertAfter(
+                    new ItemStack((ItemLike) ModItems.GOLDEN_MACHETE), ModItems.DIAMOND_MACHETE.get().getDefaultInstance(),
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.insertAfter(
                     new ItemStack((ItemLike) ModItems.DIAMOND_MACHETE), ModItems.NETHERITE_MACHETE.get().getDefaultInstance(),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.insertAfter(
+                    new ItemStack(Items.TOTEM_OF_UNDYING), ModItems.TOTEM_OF_THE_DEEP.get().getDefaultInstance(),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.insertAfter(
+                    new ItemStack((ItemLike) ModItems.TOTEM_OF_THE_DEEP), ModItems.TOTEM_OF_OMNIPRESENCE.get().getDefaultInstance(),
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
         }
 
@@ -260,9 +276,27 @@ public class AddingItemsInCreativeTabs {
             }
         }
 
+        // CNC Tab
+        if (ModList.get().isLoaded("corn_delight")) {
+            ResourceKey<CreativeModeTab> cncTabKey = ResourceKey.create(
+                    Registries.CREATIVE_MODE_TAB,
+                    ResourceLocation.fromNamespaceAndPath("corn_delight", "corn_delight")
+            ); if (event.getTabKey() == cncTabKey) {
+                event.insertAfter(
+                        new ItemStack((ItemLike) cn.mcmod.corn_delight.item.ItemRegistry.TACO), ModItems.RAW_TORTILLA_FOR_TLAYUDA.get().getDefaultInstance(),
+                        CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                event.insertAfter(
+                        new ItemStack((ItemLike) ModItems.RAW_TORTILLA_FOR_TLAYUDA), ModItems.TORTILLA_FOR_TLAYUDA.get().getDefaultInstance(),
+                        CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                event.insertAfter(
+                        new ItemStack((ItemLike) ModItems.TORTILLA_FOR_TLAYUDA), ModItems.TLAYUDA.get().getDefaultInstance(),
+                        CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            }
+        }
+
     }
-    //@SubscribeEvent
-      //public static void addCreative(BuildCreativeModeTabContentsEvent event) {
-        //System.out.println("[DEBUG TAB IDENTIFIER] Tab ID: " + event.getTabKey().location().toString());
-          //}
+    @SubscribeEvent
+      public static void addCreative(BuildCreativeModeTabContentsEvent event) {
+        System.out.println("[DEBUG TAB IDENTIFIER] Tab ID: " + event.getTabKey().location().toString());
+          }
 }

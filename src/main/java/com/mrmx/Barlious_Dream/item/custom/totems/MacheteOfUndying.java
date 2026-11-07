@@ -56,7 +56,16 @@ public class MacheteOfUndying extends MacheteItem {
         entity.removeEffectsCuredBy(EffectCures.PROTECTED_BY_TOTEM);
         entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 900, 1));
         entity.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 100, 1));
-        entity.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 800, 0));
+
+        boolean diedInFire = event.getSource().is(DamageTypeTags.IS_FIRE) || entity.isInLava() || entity.isOnFire();
+        if (diedInFire) {
+            entity.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 1200, 0));
+        }
+
+        boolean diedInWater = event.getSource().is(DamageTypeTags.IS_DROWNING) || entity.isInWater();
+        if (!diedInFire && !diedInWater) {
+            entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 300, 1));
+        }
 
         if (entity instanceof ServerPlayer serverPlayer) {
             TotemPoppedGlobalNotify.triggerPopMessage(serverPlayer, totemStack);
@@ -86,6 +95,6 @@ public class MacheteOfUndying extends MacheteItem {
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
         super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
-        tooltipComponents.add(Component.translatable("tooltip.mrmx_dream.machete.undying").withStyle(ChatFormatting.GREEN));
+        tooltipComponents.add(Component.translatable("tooltip.mrmx_dream.undying.weapons").withStyle(ChatFormatting.GREEN));
     }
 }

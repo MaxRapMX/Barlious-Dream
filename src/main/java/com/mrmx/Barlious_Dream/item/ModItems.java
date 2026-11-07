@@ -12,6 +12,9 @@ import com.mrmx.Barlious_Dream.item.custom.tools.HeavyPickaxeItem;
 import com.mrmx.Barlious_Dream.item.custom.tools.MacheteItem;
 import com.mrmx.Barlious_Dream.item.custom.tools.PlantWhistleCNC;
 import com.mrmx.Barlious_Dream.item.custom.totems.MacheteOfUndying;
+import com.mrmx.Barlious_Dream.item.custom.totems.SwordOfUndying;
+import com.mrmx.Barlious_Dream.item.custom.totems.TotemOfOmnipresence;
+import com.mrmx.Barlious_Dream.item.custom.totems.TotemOfTheDeep;
 import com.mrmx.Barlious_Dream.registry.Barlious_Dream;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -51,11 +54,36 @@ public class ModItems {
     // Miscelaneos
     public static final DeferredItem<FasterChorusFruitItem> CRYING_CHORUS_FRUIT = ITEMS.register("crying_chorus_fruit",
             () -> new FasterChorusFruitItem(new Item.Properties().rarity(Rarity.RARE).food(Food_Dreamed.CRYING_CHORUS_FRUIT)));
+    public static final DeferredItem<Item> RAW_TORTILLA_FOR_TLAYUDA = CORN_DELIGHT_REQUIRED
+            ? ITEMS.register("tortilla_for_tlayuda_raw",
+            () -> new Item(new Item.Properties().stacksTo(16).food(Food_Dreamed.RAW_TORTILLA_FOR_TLAYUDA))): null;
+    public static final DeferredItem<Item> TORTILLA_FOR_TLAYUDA = CORN_DELIGHT_REQUIRED
+            ? ITEMS.register("tortilla_for_tlayuda",
+            () -> new Item(new Item.Properties().stacksTo(16).food(Food_Dreamed.TORTILLA_FOR_TLAYUDA))): null;
+    public static final DeferredItem<DurabilityFoods> TLAYUDA = CORN_DELIGHT_REQUIRED
+            ? ITEMS.register("tlayuda",
+            () -> new DurabilityFoods(new Item.Properties().durability(6).food(Food_Dreamed.TLAYUDA)) {
+                @Override
+                public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+                    tooltipComponents.add(Component.translatable("tooltip.mrmx_dream.tlayuda").withStyle(ChatFormatting.YELLOW));
+                    super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+                }
+            }): null;
+    public static final DeferredItem<TotemOfTheDeep> TOTEM_OF_THE_DEEP = ITEMS.register("totem_of_the_deep",
+            () -> new TotemOfTheDeep(new Item.Properties().rarity(Rarity.UNCOMMON).stacksTo(1)));
+    public static final DeferredItem<TotemOfOmnipresence> TOTEM_OF_OMNIPRESENCE = ITEMS.register("totem_of_omnipresence",
+            () -> new TotemOfOmnipresence(new Item.Properties().rarity(Rarity.EPIC).stacksTo(1)));
+    public static final DeferredItem<SwordOfUndying> SWORD_OF_UNDYING = TOOLS.register("sword_of_undying",
+            () -> new SwordOfUndying(ModToolTiers.SWORD_OF_UNDYING, new Item.Properties().fireResistant().rarity(Rarity.UNCOMMON)
+                    .attributes(SwordItem.createAttributes(ModToolTiers.SWORD_OF_UNDYING, 4, -2.4f))));
 
     // Machetes; 1.3 mas de daño, pero 1.16 mas lento que las espadas vb_copper_machete
     public static final DeferredItem<MacheteItem> IRON_MACHETE = TOOLS.register("iron_machete",
             () -> new MacheteItem(ModToolTiers.IRON_MACHETE, new Item.Properties()
                     .attributes(SwordItem.createAttributes(ModToolTiers.IRON_MACHETE, 4, -2.7f))));
+    public static final DeferredItem<MacheteItem> GOLDEN_MACHETE = TOOLS.register("golden_machete",
+            () -> new MacheteItem(ModToolTiers.GOLDEN_MACHETE, new Item.Properties()
+                    .attributes(SwordItem.createAttributes(ModToolTiers.GOLDEN_MACHETE, 4, -2.7f))));
     public static final DeferredItem<MacheteItem> DIAMOND_MACHETE = TOOLS.register("diamond_machete",
             () -> new MacheteItem(ModToolTiers.DIAMOND_MACHETE, new Item.Properties()
                     .attributes(SwordItem.createAttributes(ModToolTiers.DIAMOND_MACHETE, 4, -2.7f))));
@@ -73,6 +101,8 @@ public class ModItems {
     // Cabezales de Picos reforzados; para mejorar los picos vanilla
     public static final DeferredItem<Item> IRON_HEAVY_HEAD = ITEMS.register("iron_heavy_head",
             () -> new Heavy_Heads(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> GOLDEN_HEAVY_HEAD = ITEMS.register("golden_heavy_head",
+            () -> new Heavy_Heads(new Item.Properties().stacksTo(1)));
     public static final DeferredItem<Item> DIAMOND_HEAVY_HEAD = ITEMS.register("diamond_heavy_head",
             () -> new Heavy_Heads(new Item.Properties().stacksTo(1)));
     public static final DeferredItem<Item> NETHERITE_HEAVY_HEAD = ITEMS.register("netherite_heavy_head",
@@ -84,6 +114,9 @@ public class ModItems {
     public static final DeferredItem<HeavyPickaxeItem> IRON_HEAVY_PICKAXE = TOOLS.register("iron_heavy_pickaxe",
             () -> new HeavyPickaxeItem(ModToolTiers.IRON_HEAVY_PICKAXE, new Item.Properties()
                     .attributes(PickaxeItem.createAttributes(ModToolTiers.IRON_HEAVY_PICKAXE, 2.0f, -3.1f))));
+    public static final DeferredItem<HeavyPickaxeItem> GOLDEN_HEAVY_PICKAXE = TOOLS.register("golden_heavy_pickaxe",
+            () -> new HeavyPickaxeItem(ModToolTiers.GOLDEN_HEAVY_PICKAXE, new Item.Properties()
+                    .attributes(PickaxeItem.createAttributes(ModToolTiers.GOLDEN_HEAVY_PICKAXE, 2.0f, -3.1f))));
     public static final DeferredItem<HeavyPickaxeItem> DIAMOND_HEAVY_PICKAXE = TOOLS.register("diamond_heavy_pickaxe",
             () -> new HeavyPickaxeItem(ModToolTiers.DIAMOND_HEAVY_PICKAXE, new Item.Properties()
                     .attributes(PickaxeItem.createAttributes(ModToolTiers.DIAMOND_HEAVY_PICKAXE, 2.0f, -3.1f))));
@@ -153,6 +186,9 @@ public class ModItems {
 
     static class Food_Dreamed {
         public static final FoodProperties CRYING_CHORUS_FRUIT;
+        public static final FoodProperties RAW_TORTILLA_FOR_TLAYUDA;
+        public static final FoodProperties TORTILLA_FOR_TLAYUDA;
+        public static final FoodProperties TLAYUDA;
         Food_Dreamed() {}
         static {
             var CryingChorusFruit = (new FoodProperties.Builder()).nutrition(4).saturationModifier(1.2F).alwaysEdible().fast()
@@ -163,6 +199,18 @@ public class ModItems {
                     .effect(() -> new MobEffectInstance(MobEffects.SLOW_FALLING, 300, 0), 1.0F)
                     .effect(() -> new MobEffectInstance(MobEffects.NIGHT_VISION, 7200, 0), 1.0F);
             CRYING_CHORUS_FRUIT = CryingChorusFruit.build();
+
+            var RawTortillaForTlayuda = (new FoodProperties.Builder()).nutrition(2).saturationModifier(0.5f);
+            RAW_TORTILLA_FOR_TLAYUDA = RawTortillaForTlayuda.build();
+
+            var TortillaForTlayuda = (new FoodProperties.Builder()).nutrition(4).saturationModifier(0.5f);
+            TORTILLA_FOR_TLAYUDA = TortillaForTlayuda.build();
+
+            var Tlayuda = (new FoodProperties.Builder()).nutrition(12).saturationModifier(0.7f)
+                    .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 900, 0), 1.0F);
+            BuiltInRegistries.MOB_EFFECT.getHolder(ResourceLocation.parse("farmersdelight:nourishment"))
+                    .ifPresent(nourishment -> Tlayuda.effect(() -> new MobEffectInstance(nourishment, 900, 0), 1.0F));
+            TLAYUDA = Tlayuda.build();
         }
     }
 

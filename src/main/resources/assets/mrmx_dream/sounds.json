@@ -5,7 +5,31 @@
       "name": "mrmx_dream:spongebob_disappointed", "stream": false
     }
   ]
-},
+ }, "pvz_eww": { "subtitle": "mrmx_dream.subtitle.eww",
+  "sounds": [
+    {
+      "name": "mrmx_dream:pvz_eww", "stream": false
+    }
+  ]
+ }, "whistle_only_plant_target_defense": { "subtitle": "mrmx_dream.subtitle.only_plant_target_mode_enabled",
+  "sounds": [
+    {
+      "name": "mrmx_dream:whistle_only_plant_target_defense", "stream": false
+    }
+  ]
+ }, "whistle_total_defense": { "subtitle": "mrmx_dream.subtitle.no_mercy_mode_enabled",
+  "sounds": [
+    {
+      "name": "mrmx_dream:whistle_total_defense", "stream": false
+    }
+  ]
+ }, "whistle_default_defense": { "subtitle": "mrmx_dream.subtitle.default_mode_enabled",
+  "sounds": [
+    {
+      "name": "mrmx_dream:whistle_default_defense", "stream": false
+    }
+  ]
+ },
 
 
 

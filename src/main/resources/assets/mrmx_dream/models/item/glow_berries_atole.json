@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "mrmx_dream:item/glow_berries_atole"
+    "layer0": "mrmx_dream:item/atoles/glow_berries_atole"
   }
 }

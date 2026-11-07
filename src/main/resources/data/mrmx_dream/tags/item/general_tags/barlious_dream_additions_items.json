@@ -16,6 +16,9 @@
     { "id": "mrmx_dream:mazapan_atole", "required": false },
     { "id": "mrmx_dream:angels_kiss_atole", "required": false },
     { "id": "mrmx_dream:rice_puding_atole", "required": false },
-    { "id": "mrmx_dream:champurrado", "required": false }
+    { "id": "mrmx_dream:champurrado", "required": false },
+    { "id": "mrmx_dream:tortilla_for_tlayuda_raw", "required": false },
+    { "id": "mrmx_dream:tortilla_for_tlayuda", "required": false },
+    { "id": "mrmx_dream:tlayuda", "required": false }
   ]
 }

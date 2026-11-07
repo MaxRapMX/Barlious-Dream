@@ -2,6 +2,9 @@
   "values": [
     "mrmx_dream:crying_chorus_fruit",
     { "id": "#mrmx_dream:atoles", "required": false },
-    { "id": "#mrmx_dream:excellent_atoles", "required": false }
+    { "id": "#mrmx_dream:excellent_atoles", "required": false },
+    { "id": "mrmx_dream:tortilla_for_tlayuda_raw", "required": false },
+    { "id": "mrmx_dream:tortilla_for_tlayuda", "required": false },
+    { "id": "mrmx_dream:tlayuda", "required": false }
   ]
 }

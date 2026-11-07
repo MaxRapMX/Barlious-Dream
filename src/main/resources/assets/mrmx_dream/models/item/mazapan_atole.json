@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "mrmx_dream:item/mazapan_atole"
+    "layer0": "mrmx_dream:item/atoles/mazapan_atole"
   }
 }

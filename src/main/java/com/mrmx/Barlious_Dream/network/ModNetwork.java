@@ -13,15 +13,16 @@ public class ModNetwork {
         PayloadRegistrar registrar = event.registrar("1");
 
         registrar.playToServer(
-                EnderBagPacketPayload.TYPE,
-                EnderBagPacketPayload.STREAM_CODEC,
-                EnderBagPacketPayload::handle
+                EnderBagPacketPayload.TYPE, EnderBagPacketPayload.STREAM_CODEC, EnderBagPacketPayload::handle
         );
 
         registrar.playToClient(
-                TotemAnimationPacket.TYPE,
-                TotemAnimationPacket.STREAM_CODEC,
-                TotemAnimationPacket::handleOnClient
+                TotemAnimationPacket.TYPE, TotemAnimationPacket.STREAM_CODEC, TotemAnimationPacket::handleOnClient
+        );
+        registrar.playToClient(
+                EnderContentsPayload.TYPE,
+                EnderContentsPayload.STREAM_CODEC,
+                (payload, context) -> ClientEnderCache.set(payload.items())
         );
     }
 }

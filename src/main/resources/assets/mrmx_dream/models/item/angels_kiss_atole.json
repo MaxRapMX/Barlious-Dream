@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "mrmx_dream:item/angels_kiss_atole"
+    "layer0": "mrmx_dream:item/atoles/angels_kiss_atole"
   }
 }

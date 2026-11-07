@@ -1,8 +1,10 @@
 {
   "values": [
+    { "id": "mrmx_dream:vb_copper_machete", "required": false },
     "mrmx_dream:iron_machete",
+    "mrmx_dream:golden_machete",
     "mrmx_dream:diamond_machete",
-    "mrmx_dream:netherite_machete",
-    { "id": "mrmx_dream:vb_copper_machete", "required": false }
+    "mrmx_dream:machete_of_undying",
+    "mrmx_dream:netherite_machete"
   ]
 }

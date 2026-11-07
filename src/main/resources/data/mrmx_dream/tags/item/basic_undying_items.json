@@ -1,0 +1,8 @@
+{
+  "values": [
+    "minecraft:totem_of_undying",
+    "mrmx_dream:totem_of_the_deep",
+    { "id": "artifacts:chorus_totem", "required": false },
+    "#mrmx_dream:weapons_of_undying"
+  ]
+}

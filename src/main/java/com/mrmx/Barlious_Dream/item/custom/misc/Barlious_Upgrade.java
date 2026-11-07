@@ -15,18 +15,18 @@ import java.util.List;
 public class Barlious_Upgrade extends SmithingTemplateItem {
     private static final ResourceLocation EMPTY_SLOT_SWORD = ResourceLocation.withDefaultNamespace("item/empty_slot_sword");
     private static final ResourceLocation EMPTY_SLOT_PICKAXE = ResourceLocation.withDefaultNamespace("item/empty_slot_pickaxe");
-    private static final ResourceLocation EMPTY_SLOT_MACHETE = ResourceLocation.fromNamespaceAndPath("mrmx_dream", "item/empty_slot_machete");
-    private static final ResourceLocation EMPTY_SLOT_PLANT_FOOD = ResourceLocation.fromNamespaceAndPath("mrmx_dream", "item/empty_slot_plant_food");
-    private static final ResourceLocation EMPTY_SLOT_GLASS_CUP = ResourceLocation.fromNamespaceAndPath("mrmx_dream", "item/empty_slot_glass_cup");
-    private static final ResourceLocation EMPTY_SLOT_ARTISANAL_CUP = ResourceLocation.fromNamespaceAndPath("mrmx_dream", "item/empty_slot_artisanal_cup");
-    private static final ResourceLocation EMPTY_SLOT_BLOCK = ResourceLocation.fromNamespaceAndPath("mrmx_dream", "item/empty_slot_block");
-    private static final ResourceLocation EMPTY_SLOT_HEAVY_HEAD = ResourceLocation.fromNamespaceAndPath("mrmx_dream", "item/empty_slot_heavy_head");
-    private static final ResourceLocation EMPTY_SLOT_ROTTEN_FLESH = ResourceLocation.fromNamespaceAndPath("mrmx_dream", "item/empty_slot_rotten_flesh");
-    private static final ResourceLocation EMPTY_SLOT_SUN = ResourceLocation.fromNamespaceAndPath("mrmx_dream", "item/empty_slot_sun");
-    private static final ResourceLocation EMPTY_SLOT_CHARCOAL = ResourceLocation.fromNamespaceAndPath("mrmx_dream", "item/empty_slot_charcoal");
-    private static final ResourceLocation EMPTY_SLOT_SNOWBALL = ResourceLocation.fromNamespaceAndPath("mrmx_dream", "item/empty_slot_snowball");
-    private static final ResourceLocation EMPTY_SLOT_CRYING_CHORUS_FRUIT = ResourceLocation.fromNamespaceAndPath("mrmx_dream", "item/empty_slot_chorus_fruit");
-    private static final ResourceLocation EMPTY_SLOT_TOTEM_OF_UNDYING = ResourceLocation.fromNamespaceAndPath("mrmx_dream", "item/empty_slot_totem_of_undying");
+    private static final ResourceLocation EMPTY_SLOT_MACHETE = ResourceLocation.fromNamespaceAndPath("mrmx_dream", "item/empty_slot/machete");
+    private static final ResourceLocation EMPTY_SLOT_PLANT_FOOD = ResourceLocation.fromNamespaceAndPath("mrmx_dream", "item/empty_slot/plant_food");
+    private static final ResourceLocation EMPTY_SLOT_GLASS_CUP = ResourceLocation.fromNamespaceAndPath("mrmx_dream", "item/empty_slot/glass_cup");
+    private static final ResourceLocation EMPTY_SLOT_ARTISANAL_CUP = ResourceLocation.fromNamespaceAndPath("mrmx_dream", "item/empty_slot/artisanal_cup");
+    private static final ResourceLocation EMPTY_SLOT_BLOCK = ResourceLocation.fromNamespaceAndPath("mrmx_dream", "item/empty_slot/block");
+    private static final ResourceLocation EMPTY_SLOT_HEAVY_HEAD = ResourceLocation.fromNamespaceAndPath("mrmx_dream", "item/empty_slot/heavy_head");
+    private static final ResourceLocation EMPTY_SLOT_ROTTEN_FLESH = ResourceLocation.fromNamespaceAndPath("mrmx_dream", "item/empty_slot/rotten_flesh");
+    private static final ResourceLocation EMPTY_SLOT_SUN = ResourceLocation.fromNamespaceAndPath("mrmx_dream", "item/empty_slot/sun");
+    private static final ResourceLocation EMPTY_SLOT_CHARCOAL = ResourceLocation.fromNamespaceAndPath("mrmx_dream", "item/empty_slot/charcoal");
+    private static final ResourceLocation EMPTY_SLOT_SNOWBALL = ResourceLocation.fromNamespaceAndPath("mrmx_dream", "item/empty_slot/snowball");
+    private static final ResourceLocation EMPTY_SLOT_CRYING_CHORUS_FRUIT = ResourceLocation.fromNamespaceAndPath("mrmx_dream", "item/empty_slot/chorus_fruit");
+    private static final ResourceLocation EMPTY_SLOT_TOTEM_OF_UNDYING = ResourceLocation.fromNamespaceAndPath("mrmx_dream", "item/empty_slot/totem_of_undying");
 
     public Barlious_Upgrade(Item.Properties properties) {
         super(

@@ -2,7 +2,7 @@
   "replace": false,
   "values": [
     "minecraft:apple",
-    { "id": "vampirism:human_heart",
-      "required": false }
+    { "id": "vampirism:human_heart", "required": false },
+    { "id": "mrmx_dream:tlayuda", "required": false }
   ]
 }

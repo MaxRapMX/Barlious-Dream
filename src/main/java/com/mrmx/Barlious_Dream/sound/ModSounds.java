@@ -15,4 +15,28 @@ public class ModSounds {
                             ResourceLocation.fromNamespaceAndPath("mrmx_dream", "spongebob_disappointed")
                     )
             );
+
+    public static final DeferredHolder<SoundEvent, SoundEvent> PVZ_EWW =
+            SOUND.register("pvz_eww", () -> SoundEvent.createVariableRangeEvent(
+                            ResourceLocation.fromNamespaceAndPath("mrmx_dream", "pvz_eww")
+                    )
+            );
+
+    public static final DeferredHolder<SoundEvent, SoundEvent> WHISTLE_ONLY_PLANT_TARGET =
+            SOUND.register("whistle_only_plant_target_defense", () -> SoundEvent.createVariableRangeEvent(
+                            ResourceLocation.fromNamespaceAndPath("mrmx_dream", "whistle_only_plant_target_defense")
+                    )
+            );
+
+    public static final DeferredHolder<SoundEvent, SoundEvent> WHISTLE_NO_MERCY =
+            SOUND.register("whistle_total_defense", () -> SoundEvent.createVariableRangeEvent(
+                            ResourceLocation.fromNamespaceAndPath("mrmx_dream", "whistle_total_defense")
+                    )
+            );
+
+    public static final DeferredHolder<SoundEvent, SoundEvent> WHISTLE_DEFAULT =
+            SOUND.register("whistle_default_defense", () -> SoundEvent.createVariableRangeEvent(
+                            ResourceLocation.fromNamespaceAndPath("mrmx_dream", "whistle_default_defense")
+                    )
+            );
 }

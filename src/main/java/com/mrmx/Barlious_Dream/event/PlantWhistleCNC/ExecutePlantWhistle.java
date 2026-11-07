@@ -2,6 +2,8 @@ package com.mrmx.Barlious_Dream.event.PlantWhistleCNC;
 
 import com.mrmx.Barlious_Dream.item.custom.tools.PlantWhistleCNC;
 import com.mrmx.Barlious_Dream.registry.ModAttachments;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.OwnableEntity;
 import net.minecraft.world.entity.monster.Enemy;
@@ -54,6 +56,7 @@ public class ExecutePlantWhistle {
 
         if (!player.level().isClientSide()) {
             int mode = plant.getData(ModAttachments.PLANT_DEFENSE_MODE.get());
+            player.level().playSound(null, player.blockPosition(), SoundEvents.EXPERIENCE_ORB_PICKUP, SoundSource.PLAYERS, 0.5f, 1.0f);
             player.displayClientMessage(PlantWhistleCNC.modeMessage(mode), true);
         }
     }

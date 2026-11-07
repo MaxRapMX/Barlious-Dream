@@ -24,13 +24,20 @@ public class ModCreativeModeTabs {
                         if (ModList.get().isLoaded("cnc")) output.accept(ModItems.PLANT_WHISTLE);
                         if (isModInVersionRange("vanillabackport", "[1.2.0,)")) output.accept(ModItems.VB_COPPER_MACHETE);
                         output.accept(ModItems.IRON_MACHETE);
+                        output.accept(ModItems.GOLDEN_MACHETE);
                         output.accept(ModItems.DIAMOND_MACHETE);
+                        output.accept(ModItems.MACHETE_OF_UNDYING);
                         output.accept(ModItems.NETHERITE_MACHETE);
                         output.accept(ModItems.ENDER_BAG);
+                        output.accept(ModItems.SWORD_OF_UNDYING);
+                        output.accept(ModItems.TOTEM_OF_THE_DEEP);
+                        output.accept(ModItems.TOTEM_OF_OMNIPRESENCE);
                         if (isModInVersionRange("vanillabackport", "[1.2.0,)")) output.accept(ModItems.COPPER_HEAVY_HEAD);
                         if (isModInVersionRange("vanillabackport", "[1.2.0,)")) output.accept(ModItems.VB_COPPER_HEAVY_PICKAXE);
                         output.accept(ModItems.IRON_HEAVY_HEAD);
                         output.accept(ModItems.IRON_HEAVY_PICKAXE);
+                        output.accept(ModItems.GOLDEN_HEAVY_HEAD);
+                        output.accept(ModItems.GOLDEN_HEAVY_PICKAXE);
                         output.accept(ModItems.DIAMOND_HEAVY_HEAD);
                         output.accept(ModItems.DIAMOND_HEAVY_PICKAXE);
                         output.accept(ModItems.NETHERITE_HEAVY_HEAD);
@@ -49,6 +56,9 @@ public class ModCreativeModeTabs {
                         if (ModList.get().isLoaded("corn_delight") && ModList.get().isLoaded("cnc")) output.accept(ModItems.VANILLA_WITH_CHERRIES_ATOLE);
                         if (ModList.get().isLoaded("corn_delight")) output.accept(ModItems.CHAMPURRADO);
                         output.accept(ModItems.CRYING_CHORUS_FRUIT);
+                        if (ModList.get().isLoaded("corn_delight")) output.accept(ModItems.RAW_TORTILLA_FOR_TLAYUDA);
+                        if (ModList.get().isLoaded("corn_delight")) output.accept(ModItems.TORTILLA_FOR_TLAYUDA);
+                        if (ModList.get().isLoaded("corn_delight")) output.accept(ModItems.TLAYUDA);
                     }).build());
 
     public static void register(IEventBus eventBus ) {

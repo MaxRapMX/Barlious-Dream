@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "mrmx_dream:item/vb_copper_heavy_pickaxe"
+    "layer0": "mrmx_dream:item/tools/vb_copper_heavy_pickaxe"
   }
 }

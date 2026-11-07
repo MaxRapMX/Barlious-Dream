@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:nether_star"
+  },
+  "base": {
+    "tag": "mrmx_dream:basic_undying_items"
+  },
+  "result": {
+    "count": 1,
+    "id": "mrmx_dream:totem_of_omnipresence"
+  },
+  "template": {
+    "item": "mrmx_dream:barlious_upgrade_smithing_template"
+  }
+}

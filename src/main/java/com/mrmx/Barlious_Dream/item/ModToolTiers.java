@@ -20,6 +20,16 @@ public class ModToolTiers {
     public static final Tier IRON_HEAVY_PICKAXE = IRON_CUSTOM(525, 3.9F, 12);
     // 2.1 Mas de Durabilidad, 0.65 Menos de Velocidad, y 0.85 mas de Encantabilidad
 
+    private static Tier GOLD_CUSTOM(int uses, float speed, int enchantmentvalue) {
+        return new SimpleTier( Tiers.GOLD.getIncorrectBlocksForDrops(),
+                uses, speed,
+                Tiers.GOLD.getAttackDamageBonus(),
+                enchantmentvalue, () -> Tiers.GOLD.getRepairIngredient()
+        );
+    }
+    public static final Tier GOLDEN_MACHETE = GOLD_CUSTOM(41, 9.6f, 26);
+    public static final Tier GOLDEN_HEAVY_PICKAXE = GOLD_CUSTOM(67, 7.8F, 19);
+
     private static Tier DIAMOND_CUSTOM(int uses, float speed, int enchantmentvalue) {
         return new SimpleTier( Tiers.DIAMOND.getIncorrectBlocksForDrops(),
                 uses, speed,
@@ -47,7 +57,9 @@ public class ModToolTiers {
                 enchantmentvalue, () -> Tiers.GOLD.getRepairIngredient()
         );
     }
-    public static final Tier MACHETE_OF_UNDYING = UNDYING_TOOLS(1567, 6.7f, 22);
-      //public static final Tier NETHERITE_HEAVY_PICKAXE = NETHERITE_CUSTOM(4265, 5.8f, 13);
+
+    // 0.62 Menos de Durabilidad, 1.05 Mas de Velocidad, y 1.83 mas de Encantabilidad, todo comparado al tier diamante
+    public static final Tier MACHETE_OF_UNDYING = UNDYING_TOOLS(1258, 6.7f, 22);
+    public static final Tier SWORD_OF_UNDYING = UNDYING_TOOLS(967, 8.4f, 18);
 
 }

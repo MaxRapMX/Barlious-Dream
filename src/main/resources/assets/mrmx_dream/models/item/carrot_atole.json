@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "mrmx_dream:item/carrot_atole"
+    "layer0": "mrmx_dream:item/atoles/carrot_atole"
   }
 }

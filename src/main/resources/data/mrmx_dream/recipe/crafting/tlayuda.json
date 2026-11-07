@@ -1,0 +1,21 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "corn_delight"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    { "item": "mrmx_dream:tortilla_for_tlayuda_raw" },
+    { "item": "farmersdelight:cabbage" },
+    { "item": "farmersdelight:tomato" },
+    { "item": "farmersdelight:onion" },
+    { "tag": "c:foods/cooked_meat" },
+    { "tag": "c:foods/cooked_meat" }
+  ],
+  "result": {
+    "count": 1,
+    "id": "mrmx_dream:tlayuda"
+  }
+}

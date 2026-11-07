@@ -9,7 +9,6 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModList;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
-import top.theillusivec4.curios.api.CuriosApi;
 
 @EventBusSubscriber(modid = "mrmx_dream", bus = EventBusSubscriber.Bus.GAME)
 public class ArtifactsChorusTotemNotify {
@@ -33,14 +32,8 @@ public class ArtifactsChorusTotemNotify {
                 return stack;
             }
         }
-
         if (ModList.get().isLoaded("curios")) {
-            final ItemStack[] found = {ItemStack.EMPTY};
-            CuriosApi.getCuriosInventory(player).ifPresent(handler -> {
-                handler.findFirstCurio(stack -> isArtifactsChorusTotem(stack))
-                        .ifPresent(slotResult -> found[0] = slotResult.stack());
-            });
-            return found[0];
+            return CuriosCompat.findChorusTotemInCurios(player);
         }
 
         return ItemStack.EMPTY;

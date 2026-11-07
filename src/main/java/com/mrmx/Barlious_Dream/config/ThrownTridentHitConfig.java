@@ -61,7 +61,7 @@ public class ThrownTridentHitConfig {
                 .translation("mrmx_dream.config.thrown_trident_hit.sound").defineEnum("sound", ThrownTridentHitSoundOption.MC_Ding);
         VOLUME = builder
                 .comment("Define the Volume of the Trident-Hit")
-                .translation("dreams_mrmx.config.thrown_trident_hit.volume").defineInRange("volume", 0.25, 0.0, 2.0);
+                .translation("dreams_mrmx.config.thrown_trident_hit.volume").defineInRange("volume", 1.0, 0.0, 3.0);
         PITCH = builder
                 .comment("Define the Pitch of the Trident-Hit")
                 .translation("dreams_mrmx.config.thrown_trident_hit.pitch").defineInRange("pitch", 1.0, 0.5, 2.0);

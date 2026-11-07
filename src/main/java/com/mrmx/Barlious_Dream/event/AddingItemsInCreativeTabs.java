@@ -53,8 +53,8 @@ public class AddingItemsInCreativeTabs {
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             if (!(isModInVersionRange("vanillabackport", "[1.2.0,)")))
                 event.insertAfter(
-                    new ItemStack(Items.ELYTRA), ModItems.ENDER_BAG.get().getDefaultInstance(),
-                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                        new ItemStack(Items.ELYTRA), ModItems.ENDER_BAG.get().getDefaultInstance(),
+                        CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             if (isModInVersionRange("vanillabackport", "[1.2.0,)"))
                 net.minecraft.core.registries.BuiltInRegistries.ITEM.getOptional(
                         net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("minecraft", "bundle")
@@ -296,7 +296,7 @@ public class AddingItemsInCreativeTabs {
 
     }
     @SubscribeEvent
-      public static void addCreative(BuildCreativeModeTabContentsEvent event) {
+    public static void addCreative(BuildCreativeModeTabContentsEvent event) {
         System.out.println("[DEBUG TAB IDENTIFIER] Tab ID: " + event.getTabKey().location().toString());
-          }
+    }
 }
